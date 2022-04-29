@@ -32,10 +32,10 @@ public class DriverFactory {
 
 			// WebDriverManager.chromedriver().browserVersion("100.0.4896.127").setup();
 			// WebDriverManager.chromedriver().driverVersion("100.0.4896.127").setup();
-			System.out.println("system path"+System.getProperty("user.dir"));
-			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/src/test/resources/Download/chromedriver");
+			//System.out.println("system path"+System.getProperty("user.dir"));
+			//System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/src/test/resources/Download/chromedriver");
 			// System.setProperty("webdriver.chrome.verboseLogging", "true");
-			// WebDriverManager.chromedriver().setup();
+		     WebDriverManager.chromedriver().setup();
 			 driver = new ChromeDriver();
 
 			// DesiredCapabilities capabilities = new DesiredCapabilities();
