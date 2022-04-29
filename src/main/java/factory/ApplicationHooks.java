@@ -40,7 +40,13 @@ public class ApplicationHooks {
 	// @AfterClass
 	public void quitBrowser() {
 		//driver.quit();
-		driver.close();
+		try {
+			driver.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.getMessage();
+		}
+		
 	}
 
 	// @AfterClass
