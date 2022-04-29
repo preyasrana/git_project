@@ -10,7 +10,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-
 public class ApplicationHooks {
 
 	private DriverFactory driverFactory;
@@ -23,7 +22,7 @@ public class ApplicationHooks {
 	public void getProperty() {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
-		
+
 	}
 
 	@Before(order = 1)
@@ -39,26 +38,33 @@ public class ApplicationHooks {
 	@After(order = 0)
 	// @AfterClass
 	public void quitBrowser() {
-		//driver.quit();
+		// driver.quit();
 		try {
 			driver.close();
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.getMessage();
 		}
-		
+
 	}
 
 	// @AfterClass
 	@After(order = 1)
 	// @AfterSuite
 	public void tearDown(Scenario scenario) {
+
 		if (scenario.isFailed()) {
 			// take screenshot:
-			String screenshotName = scenario.getName().replaceAll(" ", "_");
-			byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(sourcePath, "image/png", screenshotName);
-			// scenario.attach("test-output/Screenshot", "image/png", screenshotName);
+			try {
+				String screenshotName = scenario.getName().replaceAll(" ", "_");
+				byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+				scenario.attach(sourcePath, "image/png", screenshotName);
+				// scenario.attach("test-output/Screenshot", "image/png", screenshotName);
+			}
+
+			catch (Exception e) {
+				// TODO: handle exception
+			}
 
 		}
 	}
