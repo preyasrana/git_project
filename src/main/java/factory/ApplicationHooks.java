@@ -23,18 +23,17 @@ public class ApplicationHooks {
 	public void getProperty() {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
+		
+	}
+
+	@Before(order = 1)
+	// @BeforeClass
+	public void launchBrowser() {
 		String browserName = prop.getProperty("browser");
 		driverFactory = new DriverFactory();
 		driver = driverFactory.init_driver(browserName);
 		driver.get(prop.getProperty("url"));
 	}
-
-	/*
-	 * @Before(order = 1) // @BeforeClass public void launchBrowser() { String
-	 * browserName = prop.getProperty("browser"); driverFactory = new
-	 * DriverFactory(); driver = driverFactory.init_driver(browserName);
-	 * driver.get(prop.getProperty("url")); }
-	 */
 
 	// @AfterClass
 	@After(order = 0)
