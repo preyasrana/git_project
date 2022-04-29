@@ -35,12 +35,11 @@ public class ApplicationHooks {
 		driver.get(prop.getProperty("url"));
 	}
 
-	// @AfterClass
-	@After(order = 0)
-	// @AfterClass
-	public void quitBrowser() {
-		driver.quit();
-	}
+	/*
+	 * // @AfterClass
+	 * 
+	 * @After(order = 0) // @AfterClass public void quitBrowser() { driver.quit(); }
+	 */
 
 	// @AfterClass
 	@After(order = 1)
