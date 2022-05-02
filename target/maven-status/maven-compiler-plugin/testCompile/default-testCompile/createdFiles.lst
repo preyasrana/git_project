@@ -5,5 +5,6 @@ StepDefinition/MyAccountsteps.class
 Pages/Login_page.class
 Pages/Register_page.class
 Pages/MyAccount_page.class
+Runners/FailedRun.class
 Runners/Login_TestRunner.class
 Runners/Register_TestRunner.class

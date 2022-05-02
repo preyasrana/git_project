@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="54005" started-at="2022-05-02T10:42:28 IST" finished-at="2022-05-02T10:43:22 IST">
+  <suite name="Default suite" duration-ms="102733" started-at="2022-05-02T13:23:25 IST" finished-at="2022-05-02T13:25:08 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.FailedRun@543788f3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.MyAccount_Runner@4516af24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="54005" started-at="2022-05-02T10:42:28 IST" finished-at="2022-05-02T10:43:22 IST">
-      <class name="Runners.FailedRun">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.FailedRun@543788f3]" name="setUpClass" is-config="true" duration-ms="767" started-at="2022-05-02T10:42:28 IST" finished-at="2022-05-02T10:42:29 IST">
+    <test name="Default test" duration-ms="102733" started-at="2022-05-02T13:23:25 IST" finished-at="2022-05-02T13:25:08 IST">
+      <class name="Runners.MyAccount_Runner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.MyAccount_Runner@4516af24]" name="setUpClass" is-config="true" duration-ms="789" started-at="2022-05-02T13:23:25 IST" finished-at="2022-05-02T13:23:26 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3ccb12d]]>
+                <![CDATA[org.testng.TestRunner@1b8fa2fa]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.FailedRun@543788f3]" name="runScenario" duration-ms="50086" started-at="2022-05-02T10:42:29 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-02T10:43:19 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.MyAccount_Runner@4516af24]" name="runScenario" duration-ms="58751" started-at="2022-05-02T13:23:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-02T13:24:25 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify billing & Shipping address Edit(navigation) click functionality"]]>
+                <![CDATA["User enter Shipping address with different data"]]>
               </value>
             </param>
             <param index="1">
@@ -37,11 +37,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.FailedRun@543788f3]" name="tearDownClass" is-config="true" duration-ms="3117" started-at="2022-05-02T10:43:19 IST" finished-at="2022-05-02T10:43:22 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.MyAccount_Runner@4516af24]" name="runScenario" duration-ms="39559" started-at="2022-05-02T13:24:25 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-02T13:25:04 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User enter Shipping address with different data with columns"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["feature to My account Page on Address(billing/shipping) functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.MyAccount_Runner@4516af24]" name="tearDownClass" is-config="true" duration-ms="3578" started-at="2022-05-02T13:25:04 IST" finished-at="2022-05-02T13:25:08 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- Runners.FailedRun -->
+      </class> <!-- Runners.MyAccount_Runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

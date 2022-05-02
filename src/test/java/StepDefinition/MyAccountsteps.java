@@ -3,21 +3,21 @@ package StepDefinition;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
+
 //import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.touch.ScrollAction;
 //import org.testng.Assert;
 import org.testng.Assert;
-
 import Pages.MyAccount_page;
 import Utility.XLS_Reader;
 import Utility.testbase;
-
 import factory.DriverFactory;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 
 public class MyAccountsteps extends testbase {
 
@@ -177,9 +177,34 @@ public class MyAccountsteps extends testbase {
 
 		myaccount.enter_countryname(countryname);
 		Thread.sleep(5000);
-		
+
 		myaccount.click_on_country_searched_value();
 
 	}
+
+	@When("user enter a following details")
+	public void user_enter_a_following_details(DataTable datatable) throws InterruptedException {
+		// Write code here that turns the phrase above into concrete actions
+		System.out.println("Inside Steps - user enter a following details");
+
+		List<List<String>> userlist = datatable.asLists(String.class);
+
+		for (List<String> e : userlist) {
+			System.out.println(e);
+		}
+	}
+	
+	@When("user enter a following details with columns")
+	public void user_enter_a_following_details_with_columns(DataTable datatable) throws InterruptedException {
+		// Write code here that turns the phrase above into concrete actions
+		System.out.println("Inside Steps - user enter a following details");
+
+		List<Map<String, String>> userlist = datatable.asMaps(String.class, String.class);
+
+		System.out.println(userlist);
+		System.out.println(userlist.get(0).get("firstname"));
+	}
+	
+	
 
 }
