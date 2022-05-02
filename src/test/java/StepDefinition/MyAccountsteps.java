@@ -193,7 +193,7 @@ public class MyAccountsteps extends testbase {
 			System.out.println(e);
 		}
 	}
-	
+
 	@When("user enter a following details with columns")
 	public void user_enter_a_following_details_with_columns(DataTable datatable) throws InterruptedException {
 		// Write code here that turns the phrase above into concrete actions
@@ -204,7 +204,5 @@ public class MyAccountsteps extends testbase {
 		System.out.println(userlist);
 		System.out.println(userlist.get(0).get("firstname"));
 	}
-	
-	
 
 }
