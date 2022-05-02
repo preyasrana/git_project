@@ -28,7 +28,7 @@ Feature: feature to My account Page on Address(billing/shipping) functionality
      And user click on shipping edit link
      And click on Address link
      
-  @smoketest
+  @smoketest11
   Scenario: Verify billing address on by default country functionality
      Given user is on Home Page
      When user click on Myaccount link
@@ -40,7 +40,7 @@ Feature: feature to My account Page on Address(billing/shipping) functionality
      And click on billing edit link  
      Then by default country show as India
      
-  @smoketest
+  @smoketest11
   Scenario Outline: Verify country dropdown functionality
      Given user is on Home Page
      When user click on Myaccount link

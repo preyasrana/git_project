@@ -16,7 +16,11 @@ import factory.DriverFactory;
 public class MyAccount_page extends testbase {
 
 	// *********** Account Details ********************
-	@FindBy(xpath = "//nav[@class='woocommerce-MyAccount-navigation']//ul//li//a[contains(text(),'Account Details')]")
+	//@FindBy(xpath = "//nav[@class='woocommerce-MyAccount-navigation']//ul//li//a[contains(text(),'Account Details')]")
+	
+	
+	// Rerun Failed Test scenario
+	@FindBy(xpath = "//nav[@class='woocommerce-MyAccount-navigation']//ul//li//a[contains(text(),'Account Details1')]")
 	WebElement lnk_accdetail;
 
 	@FindBy(id = "account_first_name")

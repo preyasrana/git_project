@@ -5,9 +5,9 @@
     <classes>
       <class name="Runners.MyAccount_Runner">
         <methods>
-          <include name="tearDownClass"/>
           <include name="setUpClass"/>
-          <include name="feature"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
         </methods>
       </class> <!-- Runners.MyAccount_Runner -->
     </classes>

@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<test thread-count="10" name="Test">
 		<classes>
-			<class name="Runners.Login_TestRunner" />
+			<!-- <class name="Runners.Login_TestRunner" /> -->
 			<class name="Runners.MyAccount_Runner" />
 		</classes>
 	</test> <!-- Test -->
