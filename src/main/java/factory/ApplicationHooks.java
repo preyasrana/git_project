@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 
 import Utility.ConfigReader;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
@@ -17,26 +18,27 @@ public class ApplicationHooks {
 	private ConfigReader configReader;
 	Properties prop;
 
-	@Before(order = 0)
-
-	public void getProperty() {
+	/*
+	 * @Before(order = 0)
+	 * 
+	 * public void getProperty() { configReader = new ConfigReader(); prop =
+	 * configReader.init_prop();
+	 * 
+	 * }
+	 */
+	@Before()
+	// @BeforeClass
+	public void launchBrowser() {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
 
-	}
-
-	@Before(order = 1)
-	// @BeforeClass
-	public void launchBrowser() {
 		String browserName = prop.getProperty("browser");
 		driverFactory = new DriverFactory();
 		driver = driverFactory.init_driver(browserName);
 		driver.get(prop.getProperty("url"));
 	}
 
-	// @AfterClass
-	@After(order = 0)
-	// @AfterClass
+	@After()
 	public void quitBrowser() {
 		// driver.quit();
 		try {
@@ -48,9 +50,7 @@ public class ApplicationHooks {
 
 	}
 
-	// @AfterClass
-	@After(order = 1)
-	// @AfterSuite
+	@AfterStep
 	public void tearDown(Scenario scenario) {
 
 		if (scenario.isFailed()) {

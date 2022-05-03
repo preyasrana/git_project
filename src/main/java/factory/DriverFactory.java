@@ -90,7 +90,7 @@ public class DriverFactory {
 	*/
 	
 	
-	public static WebDriver init_driver(String browserName) {
+	public WebDriver init_driver(String browserName) {
 		//String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
