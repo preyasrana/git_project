@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="102.221">
-<testcase classname="feature to My account Page on Address(billing/shipping) functionality" name="User enter Shipping address with different data" time="58.087">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="79.349">
+<testcase classname="feature to My account Page on Address(billing/shipping) functionality" name="User enter Shipping address with different data" time="40.287">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
 When user click on Myaccount link...........................................passed
 Then user navigate to Register Page.........................................passed
@@ -12,7 +12,7 @@ And user click on shipping edit link........................................pass
 When user enter a following details.........................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="feature to My account Page on Address(billing/shipping) functionality" name="User enter Shipping address with different data with columns" time="43.797">
+<testcase classname="feature to My account Page on Address(billing/shipping) functionality" name="User enter Shipping address with different data with columns" time="38.625">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
 When user click on Myaccount link...........................................passed
 Then user navigate to Register Page.........................................passed
