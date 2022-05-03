@@ -24,7 +24,8 @@ public class DriverFactory {
 	 * @param browser
 	 * @return this will return tldriver.
 	 */
-	public WebDriver init_driver(String browser) {
+	
+	/*public WebDriver init_driver(String browser) {
 
 		System.out.println("browser value is: " + browser);
 
@@ -73,16 +74,36 @@ public class DriverFactory {
 
 	}
 
+*/
 	/**
 	 * this is used to get the driver with ThreadLocal
 	 * 
 	 * @return
 	 */
+	
+	/*
 	public static synchronized WebDriver getDriver() {
 		return driver;
-	}
+	}*/
 
 	/*
 	*/
+	
+	
+	public static WebDriver init_driver(String browserName) {
+		//String browserName = prop.getProperty("browser");
+		if (browserName.equals("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		} else if (browserName.equals("FF")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		//driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(TestUtil.pageLoadTimeout));
+		//driver.get(prop.getProperty("url"));
+		return driver;
+	}
 
 }

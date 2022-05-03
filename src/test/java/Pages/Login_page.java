@@ -41,7 +41,7 @@ public class Login_page extends testbase {
 	
 	
 
-	public Login_page(WebDriver driver) {
+	public Login_page() {
 		// this.driver = driver;
 		// AjaxElementLocatorFactory factory = new AjaxElementLocatorFactory(driver,
 		// 30);

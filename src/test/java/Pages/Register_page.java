@@ -42,7 +42,7 @@ public class Register_page extends testbase {
 	WebElement lnk_signout;
 	
 	
-	public Register_page(WebDriver driver) {
+	public Register_page() {
 
 		PageFactory.initElements(driver, this);
 

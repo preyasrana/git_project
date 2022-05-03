@@ -18,7 +18,9 @@ import io.cucumber.java.en.When;
 
 public class RegisterSteps {
 
-	private Register_page register = new Register_page(DriverFactory.getDriver());
+	//private Register_page register = new Register_page(DriverFactory.getDriver());
+	
+	Register_page register = new Register_page();
 	String Expected_Message;
 	protected boolean status;
 	

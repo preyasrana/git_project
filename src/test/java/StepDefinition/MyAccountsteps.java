@@ -21,8 +21,9 @@ import io.cucumber.java.en.When;
 
 public class MyAccountsteps extends testbase {
 
-	private MyAccount_page myaccount = new MyAccount_page(DriverFactory.getDriver());
+	//private MyAccount_page myaccount = new MyAccount_page(DriverFactory.getDriver());
 
+	MyAccount_page myaccount = new MyAccount_page();
 	XLS_Reader reader = new XLS_Reader("src/test/resources/Files/SampleExcel.xlsx");
 
 	@And("click on Accountdetail link")

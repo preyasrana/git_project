@@ -13,8 +13,11 @@ public class LoginSteps {
 	String Expected_Message;
 	protected boolean status;
 
-	private Login_page login = new Login_page(DriverFactory.getDriver());
-
+	//private Login_page login = new Login_page(DriverFactory.getDriver());
+	
+	//private Login_page login = new Login_page(DriverFactory.driver());
+	
+	Login_page login = new Login_page();
 	XLS_Reader reader = new XLS_Reader("src/test/resources/Files/SampleExcel.xlsx");
 
 	@When("user has enter {string} & {string}")

@@ -69,7 +69,7 @@ public class MyAccount_page extends testbase {
 
 	///////////// ********************************************* ///////////////////
 
-	public MyAccount_page(WebDriver driver) {
+	public MyAccount_page() {
 		PageFactory.initElements(driver, this);
 	}
 
