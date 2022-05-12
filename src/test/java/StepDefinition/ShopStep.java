@@ -27,8 +27,12 @@ public class ShopStep {
 		 
 		System.out.println("Inside Steps - verify filter by price content");
 		
-		String price_label =  shop.price_label();
-		System.out.println(price_label);
+		String Actual_message =  shop.price_label();
+		System.out.println(Actual_message);
+		
+		String Expected_Message = "Price: ₹150 — ₹500";
+		Assert.assertEquals(Expected_Message,Actual_message);
+		
 		
 	}
 	

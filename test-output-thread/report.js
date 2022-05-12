@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"099d3643-b2ee-45c6-b820-13e71836329f","feature":"feature to Filter by Price test functionality","scenario":"Verify Shop link page redirection","start":1652340744498,"group":1,"content":"","tags":"@feature,@smoketest,","end":1652340772733,"className":"passed"},{"id":"008d366d-44da-4870-b962-21461382b34c","feature":"feature to Filter by Price test functionality","scenario":"Verify Shop link page redirection","start":1652340772750,"group":1,"content":"","tags":"@feature,@smoketest,","end":1652340796797,"className":"passed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
+});
