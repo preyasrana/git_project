@@ -22,6 +22,7 @@ public class Upload_files_Page extends testbase {
 
 		// moveToElement(txt_emailid_login);
 		scrollToElement(btn_upload);
+		
 		isClickable(btn_upload);
 		Thread.sleep(5000);
 		String path = System.getProperty("user.dir")+ filepath;

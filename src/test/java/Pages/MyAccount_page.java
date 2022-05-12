@@ -63,7 +63,6 @@ public class MyAccount_page extends testbase {
 	@FindBy(id = "s2id_autogen1_search")
 	WebElement txt_search_country;
 	
-
 	@FindBy(xpath = "//div//ul[@id='select2-results-1']//li")
 	List<WebElement> list_searched_country;
 

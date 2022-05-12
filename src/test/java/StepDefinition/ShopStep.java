@@ -9,7 +9,6 @@ public class ShopStep {
 	
 	Shop_page shop  = new Shop_page();
 	
-	
 	@Then("user redirect on shop page verify page")
 	public void user_redirect_on_shop_page_verify_page() {
 		 
@@ -31,10 +30,18 @@ public class ShopStep {
 		System.out.println(Actual_message);
 		
 		String Expected_Message = "Price: ₹150 — ₹500";
-		Assert.assertEquals(Expected_Message,Actual_message);
-		
+		Assert.assertEquals(Expected_Message,Actual_message);	
 		
 	}
+	
+	@Then("Verify list product based on Filtration")
+	public void Verify_list_product_based_on_Filtration() {
+		
+		shop.filter_product_list();
+		
+	}
+	
+	
 	
 	
 	
