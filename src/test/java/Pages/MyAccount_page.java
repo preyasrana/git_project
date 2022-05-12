@@ -20,7 +20,7 @@ public class MyAccount_page extends testbase {
 	
 	
 	// Rerun Failed Test scenario
-	@FindBy(xpath = "//nav[@class='woocommerce-MyAccount-navigation']//ul//li//a[contains(text(),'Account Details1')]")
+	@FindBy(xpath = "//nav[@class='woocommerce-MyAccount-navigation']//ul//li//a[contains(text(),'Account Details')]")
 	WebElement lnk_accdetail;
 
 	@FindBy(id = "account_first_name")

@@ -57,7 +57,7 @@ Feature: feature to My account Page on Address(billing/shipping) functionality
      |countryname|
      |j|
          
-  @smoketest
+  @smoketest11
   Scenario: User enter Shipping address with different data
      Given user is on Home Page
      When user click on Myaccount link
@@ -73,7 +73,7 @@ Feature: feature to My account Page on Address(billing/shipping) functionality
      | dio | kerl | google |
      
      
-  @smoketest
+  @smoketest11
   Scenario: User enter Shipping address with different data with columns
      Given user is on Home Page
      When user click on Myaccount link

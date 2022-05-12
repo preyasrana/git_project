@@ -11,7 +11,7 @@ import Utility.testbase;
 
 public class Register_page extends testbase {
 
-	@FindBy(xpath = "//ul[@id='main-nav']//li//a[contains(text(),'My Account')]")
+	@FindBy(xpath = "//ul[@id='main-nav']//li//a[contains(text(),'My Account')]1222")
 	WebElement lnk_myaccount;
 
 	@FindBy(xpath = "//h2[contains(text(),'Register')]")

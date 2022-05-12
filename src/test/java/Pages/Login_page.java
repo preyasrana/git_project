@@ -24,8 +24,7 @@ public class Login_page extends testbase {
 	// By txt_username_login = By.name("userId");
 	// By txt_password_login = By.name("password");
 	// By btn_login = By.xpath("//button[normalize-space()='Login']");
-	// By btn_logout =
-	// By.xpath("//div[@class='main-top-action-logout']//img[@title='Logout']");
+	// By btn_logout = By.xpath("//div[@class='main-top-action-logout']//img[@title='Logout']");
 	
 	@FindBy(id = "username")
 	WebElement txt_emailid_login;
@@ -61,7 +60,7 @@ public class Login_page extends testbase {
 	public String login_page_display() {
 		return driver.getTitle();
 	}
-	
+		
 	public void enter_emailid(String emailid) {
 		moveToElement(txt_emailid_login);
 		txt_emailid_login.sendKeys(emailid);

@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"d82bd4a6-8d0b-45c5-a802-387a072a5495","feature":"feature to My account Page on Address(billing/shipping) functionality","scenario":"User enter Shipping address with different data with columns","start":1651562306861,"group":1,"content":"","tags":"@myaccount_address_feature,@smoketest,","end":1651562345486,"className":"passed"},{"id":"6b4ae553-dbcb-4f55-8206-182beffb7d4a","feature":"feature to My account Page on Address(billing/shipping) functionality","scenario":"User enter Shipping address with different data","start":1651562266530,"group":1,"content":"","tags":"@myaccount_address_feature,@smoketest,","end":1651562306817,"className":"passed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"2afab9ad-ced9-4c18-b370-f6ea2af8663d","feature":"feature to upload file feature functionality","scenario":"verify upload file feature functionality","start":1652332670999,"group":1,"content":"","tags":"@uploadfile_feature,@smoketest,","end":1652332690779,"className":"passed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });

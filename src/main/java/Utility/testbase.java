@@ -4,6 +4,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,6 +13,10 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import factory.DriverFactory;
 
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -24,6 +29,9 @@ import java.util.Random;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
+
 import javax.xml.bind.DatatypeConverter;
 
 public class testbase extends DriverFactory {
@@ -53,6 +61,18 @@ public class testbase extends DriverFactory {
 			e.getStackTrace();
 		}
 		return value;
+	}
+
+	// isElementPresent
+	public boolean isElementPresent(WebElement element) {
+		try {
+			if (element.isDisplayed())
+				System.out.println("Element presend on screen ***********" + element);
+			return true;
+		} catch (NoSuchElementException e) {
+			System.out.println("Element not present on screen **************" + element);
+			return false;
+		}
 	}
 
 	// isClickable
@@ -332,13 +352,15 @@ public class testbase extends DriverFactory {
 	}
 
 	// scrollToElement
-	public void scrollToElement(WebElement element) {
-		try {
-			WebElement webelement = element;
-			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", webelement);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	/*
+	 * public void scrollToElement(WebElement element) { try { WebElement webelement
+	 * = element; ((JavascriptExecutor)
+	 * driver).executeScript("arguments[0].scrollIntoView(true);", webelement); }
+	 * catch (Exception e) { e.printStackTrace(); } }
+	 */
+
+	public static void scrollToElement(WebElement element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 
 	// clearValue
@@ -403,6 +425,43 @@ public class testbase extends DriverFactory {
 		String saltStr = salt.toString();
 		return saltStr;
 
+	}
+
+	public static void selectValueFromDropdown(WebDriver driver, String locator, String text) {
+
+		WebElement lang = driver.findElement(By.xpath(locator));
+		List<WebElement> list = lang.findElements(By.xpath(locator));
+		for (WebElement opt : list) {
+			String value = opt.getText();
+			if (value.equalsIgnoreCase(text)) {
+				System.out.println("Value clicked =" + value);
+				opt.click();
+			}
+		}
+	}
+
+	public static void setClipboardData(String string) {
+		// StringSelection is a class that can be used for copy and paste operations.
+		StringSelection stringSelection = new StringSelection(string);
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+	}
+
+	public static void uploadFile(String fileLocation) {
+		try {
+			// Setting clipboard with file location
+			setClipboardData(fileLocation);
+			// native key strokes for CTRL, V and ENTER keys
+			Robot robot = new Robot();
+			robot.keyPress(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_V);
+			robot.keyRelease(KeyEvent.VK_CONTROL);
+			robot.keyPress(KeyEvent.VK_ENTER);
+			robot.keyRelease(KeyEvent.VK_ENTER);
+		} catch (Exception exp) {
+			System.out.println("Failed uploading document");
+			exp.printStackTrace();
+		}
 	}
 
 	private String chars = "abcdefghijklmnopqrstuvwxyz";

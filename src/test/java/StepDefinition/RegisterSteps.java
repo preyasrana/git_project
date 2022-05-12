@@ -55,7 +55,7 @@ public class RegisterSteps {
 		String Actual_message = register.register_page_display();
 		System.out.println(Actual_message);
 
-		Expected_Message = "My Account – Automation Practice Site";
+		Expected_Message = "My Account – Automation Practice Site1";
 		Assert.assertEquals(Expected_Message,Actual_message);
 		
 

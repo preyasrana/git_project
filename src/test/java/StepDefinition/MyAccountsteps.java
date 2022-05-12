@@ -140,7 +140,7 @@ public class MyAccountsteps extends testbase {
 		String Actual_message = myaccount.MyAccount_page_getmessage();
 		System.out.println(Actual_message);
 
-		Expected_Message = "Account details changed successfully.";
+		Expected_Message = "Account details changed successfully.1";
 		Assert.assertEquals(Expected_Message, Actual_message);
 
 	}

@@ -14,7 +14,7 @@ Feature: feature to My account Page on Account Details functionality
     Then user navigate to myaccount page
     And click on Accountdetail link
     
-  @smoketest123
+  @smoketest
   Scenario Outline: Update my account page related info
     Given user is on Home Page
     When user click on Myaccount link
