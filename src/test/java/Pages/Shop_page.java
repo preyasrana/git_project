@@ -55,10 +55,7 @@ public class Shop_page extends testbase {
 	}
 
 	public void filter_product_list() {
-
-		 
 	
-		
 		listprice = new ArrayList<>();
 
 		Invalidlistprice = new ArrayList<>();
