@@ -8,7 +8,7 @@ import Utility.testbase;
 
 public class Upload_files_Page extends testbase {
 
-	@FindBy(xpath = "//div[@id='fine-uploader-gallery']//div[@class='qq-upload-button-selector qq-upload-button']")
+	@FindBy(name = "userfile")
 	WebElement btn_upload;
 	
 	String filepath = "src/test/resources/UploadFiles/Artboard.png";

@@ -87,12 +87,12 @@ public class DriverFactory {
 		// String browserName = prop.getProperty("browser");
 		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--no-sandbox");
-			options.addArguments("--disable-dev-shm-usage");
-			driver = new ChromeDriver(options);
+			//ChromeOptions options = new ChromeOptions();
+			//options.addArguments("--no-sandbox");
+			//options.addArguments("--disable-dev-shm-usage");
+			driver = new ChromeDriver();
 
-		} else if (browserName.equals("FF")) {
+		} else if (browserName.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}

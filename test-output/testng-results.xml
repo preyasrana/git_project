@@ -1,47 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="2" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24483" started-at="2022-05-12T10:47:50 IST" finished-at="2022-05-12T10:48:14 IST">
+  <suite name="Default suite" duration-ms="174177" started-at="2022-05-12T12:43:39 IST" finished-at="2022-05-12T12:46:33 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Upload_testrunner@4516af24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="24483" started-at="2022-05-12T10:47:50 IST" finished-at="2022-05-12T10:48:14 IST">
-      <class name="Runners.Upload_testrunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Upload_testrunner@4516af24]" name="setUpClass" is-config="true" duration-ms="710" started-at="2022-05-12T10:47:50 IST" finished-at="2022-05-12T10:47:50 IST">
+    <test name="Default test" duration-ms="174177" started-at="2022-05-12T12:43:39 IST" finished-at="2022-05-12T12:46:33 IST">
+      <class name="Runners.Shop_Testrunner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="setUpClass" is-config="true" duration-ms="671" started-at="2022-05-12T12:43:39 IST" finished-at="2022-05-12T12:43:40 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@634e1b39]]>
+                <![CDATA[org.testng.TestRunner@7c46c9c3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Upload_testrunner@4516af24]" name="runScenario" duration-ms="19857" started-at="2022-05-12T10:47:50 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-12T10:48:10 IST">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="runScenario" duration-ms="105683" started-at="2022-05-12T12:43:40 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-12T12:45:26 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["verify upload file feature functionality"]]>
+                <![CDATA["Verify Shop link page redirection"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["feature to upload file feature functionality"]]>
+                <![CDATA["feature to Filter by Price test functionality"]]>
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3d77961ebac8a08d43b9bf25297a0621, get {url=http://practice.automationtesting.in/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.SWPuez}, goog:chromeOptions: {debuggerAddress: localhost:33805}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33805/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d77961ebac8a08d43b9bf25297a0621]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3d77961ebac8a08d43b9bf25297a0621, get {url=http://practice.automationtesting.in/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.SWPuez}, goog:chromeOptions: {debuggerAddress: localhost:33805}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:33805/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 3d77961ebac8a08d43b9bf25297a0621
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+at factory.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Upload_testrunner@4516af24]" name="tearDownClass" is-config="true" duration-ms="3877" started-at="2022-05-12T10:48:10 IST" finished-at="2022-05-12T10:48:14 IST">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="runScenario" duration-ms="63817" started-at="2022-05-12T12:45:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-12T12:46:29 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Shop link page redirection"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["feature to Filter by Price test functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5ac55461dae15c3d2459a0cc0b5fa964, get {url=http://practice.automationtesting.in/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.HLNdKi}, goog:chromeOptions: {debuggerAddress: localhost:44067}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44067/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ac55461dae15c3d2459a0cc0b5fa964]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5ac55461dae15c3d2459a0cc0b5fa964, get {url=http://practice.automationtesting.in/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.HLNdKi}, goog:chromeOptions: {debuggerAddress: localhost:44067}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44067/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ac55461dae15c3d2459a0cc0b5fa964
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+at factory.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="tearDownClass" is-config="true" duration-ms="3963" started-at="2022-05-12T12:46:29 IST" finished-at="2022-05-12T12:46:33 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- Runners.Upload_testrunner -->
+      </class> <!-- Runners.Shop_Testrunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

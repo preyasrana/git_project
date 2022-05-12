@@ -1,8 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="19.985">
-<testcase classname="feature to upload file feature functionality" name="verify upload file feature functionality" time="19.78">
-<system-out><![CDATA[Given user is on Home Page..................................................passed
-When user click on upload files link........................................passed
-]]></system-out>
+<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="41.231">
+<testcase classname="feature to Filter by Price test functionality" name="Verify Shop link page redirection" time="38.332">
+<failure message="unknown error: cannot determine loading status&#10;from disconnected: received Inspector.detached event&#10;  (Session info: chrome=101.0.4951.54)&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [fb4bdf98ed434896c209f6dea4d550a3, get {url=http://practice.automationtesting.in/}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.0R17Kc}, goog:chromeOptions: {debuggerAddress: localhost:44565}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44565/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fb4bdf98ed434896c209f6dea4d550a3" type="org.openqa.selenium.WebDriverException"><![CDATA[Given user is on Home Page..................................................skipped
+When user click on Shop link................................................skipped
+Then user redirect on shop page verify page.................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fb4bdf98ed434896c209f6dea4d550a3, get {url=http://practice.automationtesting.in/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.0R17Kc}, goog:chromeOptions: {debuggerAddress: localhost:44565}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:44565/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fb4bdf98ed434896c209f6dea4d550a3
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at factory.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+]]></failure>
+</testcase>
+<testcase classname="feature to Filter by Price test functionality" name="Verify Shop link page redirection 2" time="2.667">
+<failure message="unknown error: cannot determine loading status&#10;from disconnected: received Inspector.detached event&#10;  (Session info: chrome=101.0.4951.54)&#10;Build info: version: '4.1.3', revision: '7b1ebf28ef'&#10;System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [090652a93330d0844b8b2a0940a76b19, get {url=http://practice.automationtesting.in/}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.5UEgEl}, goog:chromeOptions: {debuggerAddress: localhost:40367}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40367/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 090652a93330d0844b8b2a0940a76b19" type="org.openqa.selenium.WebDriverException"><![CDATA[Given user is on Home Page..................................................skipped
+When user click on Shop link................................................skipped
+Then verify filter by price content.........................................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=101.0.4951.54)
+Build info: version: '4.1.3', revision: '7b1ebf28ef'
+System info: host: 'preyas-r', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.13.0-40-generic', java.version: '1.8.0_212'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [090652a93330d0844b8b2a0940a76b19, get {url=http://practice.automationtesting.in/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.54, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: /tmp/.com.google.Chrome.5UEgEl}, goog:chromeOptions: {debuggerAddress: localhost:40367}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:cdp: ws://localhost:40367/devtoo..., se:cdpVersion: 101.0.4951.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 090652a93330d0844b8b2a0940a76b19
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:330)
+	at factory.ApplicationHooks.launchBrowser(ApplicationHooks.java:38)
+]]></failure>
 </testcase>
 </testsuite>
