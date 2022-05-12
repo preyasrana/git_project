@@ -3,6 +3,10 @@ package Pages;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.lang.model.element.Element;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -24,10 +28,18 @@ public class Shop_page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='products masonry-done']//li")
 	List<WebElement> list_product;
+	
+	@FindBy(xpath = "//ul[@class='products masonry-done']//li//span[@class='price']")
+	List<WebElement> listof_product;
 
-	@FindBy(xpath = "//ul[@class='products masonry-done']//li//span[@class='price']//span[@class='woocommerce-Price-amount amount']")
+
+	@FindBy(xpath = "//ul[@class='products masonry-done']//li//span[@class='price']/span")
 	List<WebElement> list_productprice;
-
+	
+	@FindBy(xpath = "//ul[@class='products masonry-done']//li//span[@class='price']/ins/span")
+	List<WebElement> list_insproductprice;
+	
+	
 	public Shop_page() {
 
 		PageFactory.initElements(driver, this);
@@ -44,11 +56,15 @@ public class Shop_page extends testbase {
 
 	public void filter_product_list() {
 
+		 
+	
+		
 		listprice = new ArrayList<>();
 
 		Invalidlistprice = new ArrayList<>();
 		int Productsize = list_product.size();
 		System.out.println("Productsize -->" + Productsize);
+		
 
 		for (WebElement productprice : list_productprice) {
 			System.out.println(productprice.getText().replace("₹", ""));
@@ -57,7 +73,15 @@ public class Shop_page extends testbase {
 
 			listprice.add(getprice);
 		}
+		
+		for (WebElement productprice : list_insproductprice) {
+			System.out.println(productprice.getText().replace("₹", ""));
 
+			double getprice = Double.parseDouble(productprice.getText().replace("₹", ""));
+
+			listprice.add(getprice);
+		}
+			
 		System.out.println(listprice);
 
 		String fromprice = from_price.getText().replace("₹", "");
@@ -77,7 +101,7 @@ public class Shop_page extends testbase {
 				Invalidlistprice.add(listprice.get(i));
 			}
 		}
-		System.out.println(Invalidlistprice);
+		System.out.println("Invalid list prices -->"+Invalidlistprice);
 	}
 
 }
