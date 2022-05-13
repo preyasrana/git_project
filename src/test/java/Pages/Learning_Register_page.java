@@ -1,5 +1,10 @@
 package Pages;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -21,7 +26,7 @@ public class Learning_Register_page extends testbase {
 
 	@FindBy(xpath = "//input[@type='email']")
 	WebElement txt_email;
-	
+
 	@FindBy(xpath = "//div[@class='col-sm-4 col-xs-4 tooltptext']//span")
 	WebElement Validation_email;
 
@@ -30,15 +35,18 @@ public class Learning_Register_page extends testbase {
 
 	@FindBy(id = "imagesrc")
 	WebElement btn_uploadimg;
-	
+
 	@FindBy(xpath = "//div[@class='col-md-4 col-xs-4 col-sm-4']//input[@type='radio' and @value='Male']")
 	WebElement radio_male_gender;
-	
-	@FindBy(xpath = "//label[@class='checks'][contains(text(),'Cricket')]")
-	WebElement checkbox_male_gender;
-	
-	
-	
+
+	@FindBy(xpath = "//input[@id='checkbox1']")
+	WebElement checkbox_hobbies;
+
+	@FindBy(id = "msdd")
+	WebElement txt_language;
+
+	@FindBy(xpath = "//div[@id='msdd']//following::ul//li//a")
+	List<WebElement> list_language;
 
 	public Learning_Register_page() {
 
@@ -72,7 +80,7 @@ public class Learning_Register_page extends testbase {
 		Thread.sleep(3000);
 		return getText(Validation_email);
 	}
-	
+
 	public void enter_emailid(String emailid) {
 		sendKeys(txt_email, emailid);
 	}
@@ -91,17 +99,28 @@ public class Learning_Register_page extends testbase {
 		uploadFile(path);
 		Thread.sleep(5000);
 	}
-	
+
 	public void clickongender() {
-		isClickable(radio_male_gender);	
+		isClickable(radio_male_gender);
 	}
-	
+
 	public void clickonHobbies() {
-		isClickable(checkbox_male_gender);	
+		isClickable(checkbox_hobbies);
 	}
-	
-	
-	
-	
+
+	public void clickonlanguages() {
+		isClickable(txt_language);
+	}
+
+	// When user click on Languages
+
+	public void listlanguages() throws InterruptedException {
+
+		getMultipleTextwithclick(list_language, "German");
+		getMultipleTextwithclick(list_language, "Estonian");
+		getMultipleTextwithclick(list_language, "Dutch");
+		getMultipleTextwithclick(list_language, "Croatian");
+
+	}
 
 }

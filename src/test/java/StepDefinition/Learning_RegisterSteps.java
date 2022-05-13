@@ -50,7 +50,7 @@ public class Learning_RegisterSteps {
 
 	@When("user hover on Emailid")
 	public void user_hover_on_Emailid() throws InterruptedException {
-		
+
 		Actual_message = learning_reg.hover_emailid();
 		System.out.println(Actual_message);
 
@@ -76,19 +76,25 @@ public class Learning_RegisterSteps {
 
 		learning_reg.click_on_uploadbtn();
 	}
-	
+
 	@When("user click on gender")
 	public void user_click_on_gender() throws InterruptedException {
 
 		learning_reg.clickongender();
 	}
-	
+
 	@When("user click on Hobbies")
 	public void user_click_on_Hobbies() throws InterruptedException {
 
 		learning_reg.clickonHobbies();
 	}
-	
 
+	@When("user click on Languages")
+	public void user_click_on_Languages() throws InterruptedException {
+
+		learning_reg.clickonlanguages();
+		learning_reg.listlanguages();
+		
+	}
 
 }

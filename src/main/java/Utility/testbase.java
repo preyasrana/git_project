@@ -205,8 +205,6 @@ public class testbase extends DriverFactory {
 		}
 		return value;
 	}
-	
-	
 
 	// moveToElement
 	public void moveToElement(WebElement element) {
@@ -255,20 +253,65 @@ public class testbase extends DriverFactory {
 		return element;
 	}
 
+	public static void selectByValue(WebElement element, String value) {
+		Select selectElement = new Select(element);
+		selectElement.selectByValue(value);
+	}
+
+	public static void selectByText(WebElement element, String text) {
+		Select selectElement = new Select(element);
+		selectElement.selectByVisibleText(text);
+	}
+
 	// list of values
-	public List<String> getMultipleText(List<WebElement> element) {
+	public List<String> getMultipleTextwithclick(List<WebElement> element, String text) {
+		System.out.println("List size :: " + element.size());
 		List<String> values = new ArrayList<>();
 		try {
 			List<WebElement> webElements = element;
 			for (WebElement webElement : webElements) {
 				values.add(webElement.getText());
+				if (text.equals(webElement.getText())) {
 
+					isClickable(webElement);
+				}
 			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		System.out.println(values);
 		return values;
+	}
+
+	public List<String> getMultipleText(List<WebElement> element) {
+		System.out.println("List size :: " + element.size());
+		List<String> values = new ArrayList<>();
+		try {
+			List<WebElement> webElements = element;
+			for (WebElement webElement : webElements) {
+				values.add(webElement.getText());
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println(values);
+		return values;
+	}
+
+	public static void selectValue(String locator, String text) {
+
+		// WebElement lang = locator;
+		WebElement lang = driver.findElement(By.xpath(locator));
+		List<WebElement> list = lang.findElements((By.xpath(locator)));
+		for (WebElement opt : list) {
+			String value = opt.getText();
+			if (value.equalsIgnoreCase(text)) {
+				System.out.println("Value clicked =" + value);
+				opt.click();
+			}
+		}
 	}
 
 	// List validateImage
@@ -459,20 +502,6 @@ public class testbase extends DriverFactory {
 		return saltStr;
 
 	}
-
-	public static void selectValue(String locator, String text) {
-
-		WebElement lang = driver.findElement(By.xpath(locator));
-		List<WebElement> list = lang.findElements(By.xpath(locator));
-		for (WebElement opt : list) {
-			String value = opt.getText();
-			if (value.equalsIgnoreCase(text)) {
-				System.out.println("Value clicked =" + value);
-				opt.click();
-			}
-		}
-	}
-	
 
 	public static void setClipboardData(String string) {
 		// StringSelection is a class that can be used for copy and paste operations.

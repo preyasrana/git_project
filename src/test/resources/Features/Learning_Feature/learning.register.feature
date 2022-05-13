@@ -22,4 +22,12 @@ Feature: Feature to Register test functionality
     When user upload photo
     When user click on gender
     When user click on Hobbies
+    When user click on Languages 
+    
+    
+    
+    
+    
+    
+    
     
