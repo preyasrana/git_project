@@ -76,5 +76,19 @@ public class Learning_RegisterSteps {
 
 		learning_reg.click_on_uploadbtn();
 	}
+	
+	@When("user click on gender")
+	public void user_click_on_gender() throws InterruptedException {
+
+		learning_reg.clickongender();
+	}
+	
+	@When("user click on Hobbies")
+	public void user_click_on_Hobbies() throws InterruptedException {
+
+		learning_reg.clickonHobbies();
+	}
+	
+
 
 }

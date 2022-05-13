@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.538">
-<testcase classname="Feature to Register test functionality" name="Check Register Functionality working or not with Valid Details" time="25.308">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="27.414">
+<testcase classname="Feature to Register test functionality" name="Check Register Functionality working or not with Valid Details" time="27.169">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
 Then firstname lastname gets placeholder name then verify...................passed
 When user enter firstname...................................................passed
@@ -10,6 +10,8 @@ When user hover on Emailid..................................................pass
 When user enter emailid.....................................................passed
 When user enter phone.......................................................passed
 When user upload photo......................................................passed
+When user click on gender...................................................passed
+When user click on Hobbies..................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

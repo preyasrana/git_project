@@ -30,6 +30,15 @@ public class Learning_Register_page extends testbase {
 
 	@FindBy(id = "imagesrc")
 	WebElement btn_uploadimg;
+	
+	@FindBy(xpath = "//div[@class='col-md-4 col-xs-4 col-sm-4']//input[@type='radio' and @value='Male']")
+	WebElement radio_male_gender;
+	
+	@FindBy(xpath = "//label[@class='checks'][contains(text(),'Cricket')]")
+	WebElement checkbox_male_gender;
+	
+	
+	
 
 	public Learning_Register_page() {
 
@@ -75,15 +84,24 @@ public class Learning_Register_page extends testbase {
 	public void click_on_uploadbtn() throws InterruptedException {
 
 		moveToElement(btn_uploadimg);
-		// scrollToElement(btn_uploadimg);
 		isClickable_javascript(btn_uploadimg);
 		Thread.sleep(5000);
 		String path = System.getProperty("user.dir") + filepath;
-		// String path
-		// ="/home/preyas.r@ah.zymrinc.com/Desktop/preyas/eclipse-workspace/git_project/src/test/resources/UploadFiles/Artboard.png";
 		System.out.println("Uploaded file name: " + path);
 		uploadFile(path);
 		Thread.sleep(5000);
 	}
+	
+	public void clickongender() {
+		isClickable(radio_male_gender);	
+	}
+	
+	public void clickonHobbies() {
+		isClickable(checkbox_male_gender);	
+	}
+	
+	
+	
+	
 
 }

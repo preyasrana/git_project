@@ -205,6 +205,8 @@ public class testbase extends DriverFactory {
 		}
 		return value;
 	}
+	
+	
 
 	// moveToElement
 	public void moveToElement(WebElement element) {
@@ -458,7 +460,7 @@ public class testbase extends DriverFactory {
 
 	}
 
-	public static void selectValueFromDropdown(WebDriver driver, String locator, String text) {
+	public static void selectValue(String locator, String text) {
 
 		WebElement lang = driver.findElement(By.xpath(locator));
 		List<WebElement> list = lang.findElements(By.xpath(locator));
@@ -470,6 +472,7 @@ public class testbase extends DriverFactory {
 			}
 		}
 	}
+	
 
 	public static void setClipboardData(String string) {
 		// StringSelection is a class that can be used for copy and paste operations.

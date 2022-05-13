@@ -20,3 +20,6 @@ Feature: Feature to Register test functionality
     When user enter phone
       | +9123409890 |
     When user upload photo
+    When user click on gender
+    When user click on Hobbies
+    
