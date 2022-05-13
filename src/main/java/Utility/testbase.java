@@ -167,7 +167,7 @@ public class testbase extends DriverFactory {
 		String value = null;
 		try {
 			waitForWebElementIsVisible(element, 30);
-			scrollToElement(element);
+			//scrollToElement(element);
 			value = element.getText();
 		} catch (Exception e) {
 			e.printStackTrace();

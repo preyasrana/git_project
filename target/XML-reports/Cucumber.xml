@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="28.15">
-<testcase classname="feature to Filter by Price test functionality" name="Verify Shop link page redirection" time="27.943">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="39.64">
+<testcase classname="feature to Filter by Price test functionality" name="Verify Price Filtartion wise Product listing" time="39.429">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
 When user click on Shop link................................................passed
+Then user click on slider price.............................................passed
 Then verify filter by price content.........................................passed
+When user click on Filter button............................................passed
+Then Verify list product based on Filtration................................passed
+Then user click on slider price new.........................................passed
+Then verify filter by price content.........................................passed
+When user click on Filter button............................................passed
 Then Verify list product based on Filtration................................passed
 ]]></system-out>
 </testcase>

@@ -82,8 +82,8 @@ public class Register_page extends testbase {
 	}
 
 	public void click_register() {
-		btn_register.click();
-
+	
+		isClickable(btn_register);
 	}
 
 	

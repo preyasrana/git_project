@@ -16,11 +16,17 @@ Feature: feature to Filter by Price test functionality
      Then Verify list product based on Filtration
      
  @smoketest
- Scenario: Verify Shop link page redirection
+ Scenario: Verify Price Filtartion wise Product listing 
      Given user is on Home Page
      When user click on Shop link
      Then user click on slider price 
-     
+     Then verify filter by price content
+     When user click on Filter button 
+     Then Verify list product based on Filtration
+     Then user click on slider price new 
+     Then verify filter by price content
+     When user click on Filter button 
+     Then Verify list product based on Filtration
      
       
      

@@ -4,6 +4,7 @@ import org.testng.Assert;
 
 import Pages.Shop_page;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class ShopStep {
 	
@@ -29,17 +30,45 @@ public class ShopStep {
 		String Actual_message =  shop.price_label();
 		System.out.println(Actual_message);
 		
-		String Expected_Message = "Price: ₹150 — ₹500";
-		Assert.assertEquals(Expected_Message,Actual_message);	
+		//String Expected_Message = "Price: ₹150 — ₹500";
+		//Assert.assertEquals(Expected_Message,Actual_message);	
 		
 	}
 	
 	@Then("Verify list product based on Filtration")
-	public void Verify_list_product_based_on_Filtration() {
+	public void Verify_list_product_based_on_Filtration() throws InterruptedException {
 		
 		shop.filter_product_list();
 		
+	}	
+	
+	@Then("user click on slider price")
+	public void user_click_on_slider_price() throws InterruptedException {
+		
+		shop.Filter_product_dragdrop(50, 0);
+		
 	}
+	
+	@Then("user click on slider price new")
+	public void user_click_on_slider_price_new() throws InterruptedException {
+		
+		shop.Filter_product_dragdrop(5, 0);
+		
+	}
+	
+	
+	
+	@When("user click on Filter button")
+	public void user_click_on_Filter_button() throws InterruptedException {
+		
+	   shop.click_on_filter_btn();
+		
+	}	
+	
+	
+	
+	
+	
 	
 	
 	
