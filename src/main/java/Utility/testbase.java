@@ -94,6 +94,25 @@ public class testbase extends DriverFactory {
 		return value;
 	}
 
+	public boolean isClickable_javascript(WebElement element) {
+		boolean value = false;
+
+		System.out.println(driver);
+		waitForWebElementIsClickable(element, 10);
+
+		try {
+
+			if (element.isDisplayed() && element.isEnabled()) {
+
+				JavascriptExecutor executor = (JavascriptExecutor) driver;
+				executor.executeScript("arguments[0].click();", element);
+			}
+		} catch (Exception e) {
+			e.getStackTrace();
+		}
+		return value;
+	}
+
 	public boolean isClickable(List<WebElement> element) {
 		boolean value = false;
 
@@ -167,8 +186,20 @@ public class testbase extends DriverFactory {
 		String value = null;
 		try {
 			waitForWebElementIsVisible(element, 30);
-			//scrollToElement(element);
+			// scrollToElement(element);
 			value = element.getText();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return value;
+	}
+
+	public String getAttribute(WebElement element, String elename) {
+		String value = null;
+		try {
+			waitForWebElementIsVisible(element, 30);
+			// scrollToElement(element);
+			value = element.getAttribute(elename);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

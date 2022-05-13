@@ -1,0 +1,22 @@
+#Author
+#Date
+#Description
+@feature
+Feature: Feature to Register test functionality
+
+  @smoketest
+  Scenario: Check Register Functionality working or not with Valid Details
+    Given user is on Home Page
+    Then firstname lastname gets placeholder name then verify
+    When user enter firstname
+      | preyas |
+    When user enter lastname
+      | rana |
+    When user enter address
+      | testing message by me |
+    When user hover on Emailid  
+    When user enter emailid
+      | testuser@gmail.com |
+    When user enter phone
+      | +9123409890 |
+    When user upload photo

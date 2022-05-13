@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="39.64">
-<testcase classname="feature to Filter by Price test functionality" name="Verify Price Filtartion wise Product listing" time="39.429">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.538">
+<testcase classname="Feature to Register test functionality" name="Check Register Functionality working or not with Valid Details" time="25.308">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
-When user click on Shop link................................................passed
-Then user click on slider price.............................................passed
-Then verify filter by price content.........................................passed
-When user click on Filter button............................................passed
-Then Verify list product based on Filtration................................passed
-Then user click on slider price new.........................................passed
-Then verify filter by price content.........................................passed
-When user click on Filter button............................................passed
-Then Verify list product based on Filtration................................passed
+Then firstname lastname gets placeholder name then verify...................passed
+When user enter firstname...................................................passed
+When user enter lastname....................................................passed
+When user enter address.....................................................passed
+When user hover on Emailid..................................................passed
+When user enter emailid.....................................................passed
+When user enter phone.......................................................passed
+When user upload photo......................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -2,46 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43273" started-at="2022-05-13T13:06:42 IST" finished-at="2022-05-13T13:07:26 IST">
+  <suite name="Default suite" duration-ms="29511" started-at="2022-05-13T16:25:08 IST" finished-at="2022-05-13T16:25:38 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="43273" started-at="2022-05-13T13:06:42 IST" finished-at="2022-05-13T13:07:26 IST">
-      <class name="Runners.Shop_Testrunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="setUpClass" is-config="true" duration-ms="667" started-at="2022-05-13T13:06:42 IST" finished-at="2022-05-13T13:06:43 IST">
+    <test name="Default test" duration-ms="29511" started-at="2022-05-13T16:25:08 IST" finished-at="2022-05-13T16:25:38 IST">
+      <class name="Runners.Learning_Registerrunner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="setUpClass" is-config="true" duration-ms="729" started-at="2022-05-13T16:25:08 IST" finished-at="2022-05-13T16:25:09 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@112c2930]]>
+                <![CDATA[org.testng.TestRunner@2a0963be]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="runScenario" duration-ms="39512" started-at="2022-05-13T13:06:43 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-13T13:07:22 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="runScenario" duration-ms="25398" started-at="2022-05-13T16:25:09 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-13T16:25:34 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify Price Filtartion wise Product listing"]]>
+                <![CDATA["Check Register Functionality working or not with Valid Details"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["feature to Filter by Price test functionality"]]>
+                <![CDATA["Feature to Register test functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Shop_Testrunner@4516af24]" name="tearDownClass" is-config="true" duration-ms="3059" started-at="2022-05-13T13:07:22 IST" finished-at="2022-05-13T13:07:26 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="tearDownClass" is-config="true" duration-ms="3346" started-at="2022-05-13T16:25:34 IST" finished-at="2022-05-13T16:25:38 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- Runners.Shop_Testrunner -->
+      </class> <!-- Runners.Learning_Registerrunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
