@@ -152,7 +152,6 @@ public class testbase extends DriverFactory {
 
 		driver.close();
 		try {
-
 			Thread.sleep(4000);
 			driver.switchTo().window(parentWindow);
 		} catch (Exception e) {
@@ -207,12 +206,12 @@ public class testbase extends DriverFactory {
 		return value;
 	}
 
-	public String getAttribute(WebElement element, String elename) {
+	public String getAttribute(WebElement element, String elevalue) {
 		String value = null;
 		try {
-			waitForWebElementIsVisible(element, 30);
+
 			// scrollToElement(element);
-			value = element.getAttribute(elename);
+			value = element.getAttribute(elevalue);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
