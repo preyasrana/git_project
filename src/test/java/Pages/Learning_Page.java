@@ -148,6 +148,8 @@ public class Learning_Page extends testbase {
 	
 	public void dob_picker_present() {
 		isElementPresent(ele_dob_picker);
+		getCurrentDay();
+		
 	}
 
 }
