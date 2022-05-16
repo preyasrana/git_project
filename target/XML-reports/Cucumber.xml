@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="31.919">
-<testcase classname="Feature to Learning_Automation test functionality" name="Check Datepicker Functionality working or not" time="31.685">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="26.283">
+<testcase classname="Feature to Learning_Automation test functionality" name="Check Datepicker Functionality working or not" time="26.055">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
 When user click on Datepickerlink...........................................passed
 When user click on Datepicker icon..........................................passed

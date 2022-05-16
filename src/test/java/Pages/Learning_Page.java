@@ -1,5 +1,7 @@
 package Pages;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -64,6 +66,8 @@ public class Learning_Page extends testbase {
 	@FindBy(id = "ui-datepicker-div")
 	WebElement ele_dob_picker;
 	
+	@FindBy(xpath = "//tbody//tr//td[@data-handler='selectDay']//a")
+	List<WebElement> ele_dob_days;
 	
 	
 
@@ -72,6 +76,12 @@ public class Learning_Page extends testbase {
 		PageFactory.initElements(driver, this);
 	}
 
+	
+	public List<String> dob_days() throws InterruptedException {
+
+		return getMultipleAttribute(ele_dob_days, "class","highlight");
+
+	}
 	public void hover_Switchto() throws InterruptedException {
 		moveToElement(lbl_Switchto);
 
@@ -146,9 +156,9 @@ public class Learning_Page extends testbase {
 		isClickable(ele_dob_picker_ico);
 	}
 	
-	public void dob_picker_present() {
+	public String dob_picker_present() {
 		isElementPresent(ele_dob_picker);
-		getCurrentDay();
+		return getCurrentDay();
 		
 	}
 

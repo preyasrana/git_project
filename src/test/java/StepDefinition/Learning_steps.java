@@ -1,5 +1,7 @@
 package StepDefinition;
 
+import java.util.List;
+
 import org.testng.Assert;
 
 import Pages.Learning_Page;
@@ -122,7 +124,28 @@ public class Learning_steps {
 	@Then("Datepicker should be visible")
 	public void Datepicker_should_be_visible() throws InterruptedException {
 
-		learning_step.dob_picker_present();
+		String datevalues = learning_step.dob_picker_present();
+		System.out.println(datevalues);
+	   
+		List<String> values =  learning_step.dob_days();
+		System.out.println(values);
+		
+		for (int i = 0; i < values.size(); i++) {
+
+			System.out.println(values.get(i));
+		
+			if (datevalues.equals(values.get(i))) {
+				
+				System.out.println("value matched :: "+ values.get(i));
+			}
+			else {
+				System.out.println("value not matched :: " + values.get(i));
+			}	
+		}
+		
+		
+		
+		
 		
 
 	}

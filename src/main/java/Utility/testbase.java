@@ -221,6 +221,36 @@ public class testbase extends DriverFactory {
 		return value;
 	}
 
+	public List<String> getMultipleAttribute(List<WebElement> element, String text, String expectedvalue) {
+		System.out.println("List size :: " + element.size());
+		List<String> values = new ArrayList<>();
+
+		try {
+			List<WebElement> webElements = element;
+			for (WebElement webElement : webElements) {
+				// values.add(webElement.getText());
+				String value = webElement.getAttribute(text);
+				String element_gettext = webElement.getText();
+				// System.out.println(value);
+				// System.out.println(expectedvalue);
+				if (value.contains(expectedvalue)) {
+
+					System.out.println("value matched");
+					System.out.println(element_gettext);
+					values.add(element_gettext);
+					isClickable(webElement);
+
+				}
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println(values);
+		return values;
+	}
+
 	// moveToElement
 	public void moveToElement(WebElement element) {
 		try {
@@ -565,11 +595,11 @@ public class testbase extends DriverFactory {
 
 		// Get Current Day as a number
 		int todayInt = calendar.get(Calendar.DAY_OF_MONTH);
-		System.out.println("Today Int: " + todayInt + "\n");
+		System.out.println("Today Date Int: " + todayInt + "\n");
 
 		// Integer to String Conversion
 		String todayStr = Integer.toString(todayInt);
-		System.out.println("Today Str: " + todayStr + "\n");
+		System.out.println("Today Date Str: " + todayStr + "\n");
 
 		return todayStr;
 	}
