@@ -1,8 +1,10 @@
 package StepDefinition;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.testng.Assert;
-
 import Pages.Learning_Register_page;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Learning_RegisterSteps {
@@ -94,7 +96,65 @@ public class Learning_RegisterSteps {
 
 		learning_reg.clickonlanguages();
 		learning_reg.listlanguages();
+
+	}
+
+	@Then("Verify Selected languages")
+	public void Verify_Selected_languages() throws InterruptedException {
+		List<String> Expected_listlanguage = learning_reg.Selectedlanguages();
+
+		List<String> Actual_listlanguage = new ArrayList<String>();
+		Actual_listlanguage.add("German");
+		Actual_listlanguage.add("Estonian");
+		Actual_listlanguage.add("Dutch");
+		Actual_listlanguage.add("Croatian");
+
+		Expected_listlanguage.retainAll(Actual_listlanguage);
+		Actual_listlanguage.removeAll(Expected_listlanguage);
+		System.out.println("similiar Languages ::" + Expected_listlanguage);
+		System.out.println("different Languages ::" + Actual_listlanguage);
+
+	}
+
+	@When("user click on Skill")
+	public void user_click_on_Skill() throws InterruptedException {
+
+		learning_reg.clickonskills("Analytics");
+		Thread.sleep(5000);
+	}
+
+	@When("user select dateofbirth")
+	public void user_select_dateofbirth() throws InterruptedException {
+
+		// sel_dob_year
+		learning_reg.sel_dob_year("1991");
+
+		Actual_message = learning_reg.firstoption_date_year();
+		System.out.println(Actual_message);
+
+		Expected_Message = "1991";
+		Assert.assertEquals(Expected_Message, Actual_message);
+
+		// *****   sel_dob_month  **********
+		learning_reg.sel_dob_month("April");
+
+		Actual_message = learning_reg.firstoption_dob_month();
+		System.out.println(Actual_message);
+
+		Expected_Message = "April";
+		Assert.assertEquals(Expected_Message, Actual_message);
 		
+
+		// sel_dob_day
+		learning_reg.sel_dob_day("27");
+		Actual_message = learning_reg.firstoption_dob_day();
+		System.out.println(Actual_message);
+
+		Expected_Message = "27";
+		Assert.assertEquals(Expected_Message, Actual_message);
+		
+
+		Thread.sleep(5000);
 	}
 
 }

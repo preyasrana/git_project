@@ -22,7 +22,14 @@ Feature: Feature to Register test functionality
     When user upload photo
     When user click on gender
     When user click on Hobbies
-    When user click on Languages 
+    When user click on Languages
+    Then Verify Selected languages
+    When user click on Skill
+    When user select dateofbirth
+    
+    
+    
+   
     
     
     

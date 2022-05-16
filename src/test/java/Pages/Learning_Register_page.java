@@ -1,10 +1,6 @@
 package Pages;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -47,6 +43,24 @@ public class Learning_Register_page extends testbase {
 
 	@FindBy(xpath = "//div[@id='msdd']//following::ul//li//a")
 	List<WebElement> list_language;
+
+	@FindBy(xpath = "//div[@class='form-group']//label[contains(text(),'Languages')]")
+	WebElement lbl_language;
+
+	@FindBy(xpath = "//multi-select//div[@class='ui-autocomplete-multiselect-item']")
+	List<WebElement> selected_language;
+
+	@FindBy(xpath = "//select[@ng-model='Skill']")
+	WebElement sel_skill;
+
+	@FindBy(xpath = "//select[@id='yearbox']")
+	WebElement sel_date_year;
+
+	@FindBy(xpath = "//select[@ng-model='monthbox']")
+	WebElement sel_date_month;
+
+	@FindBy(xpath = "//select[@ng-model='daybox']")
+	WebElement sel_date_day;
 
 	public Learning_Register_page() {
 
@@ -112,15 +126,55 @@ public class Learning_Register_page extends testbase {
 		isClickable(txt_language);
 	}
 
-	// When user click on Languages
-
 	public void listlanguages() throws InterruptedException {
 
 		getMultipleTextwithclick(list_language, "German");
 		getMultipleTextwithclick(list_language, "Estonian");
 		getMultipleTextwithclick(list_language, "Dutch");
 		getMultipleTextwithclick(list_language, "Croatian");
+		Thread.sleep(3000);
+		isClickable(lbl_language);
+	}
 
+	public List<String> Selectedlanguages() throws InterruptedException {
+
+		return getMultipleText(selected_language);
+
+	}
+
+	public void clickonskills(String skillvalue) {
+
+		selectByValue(sel_skill, skillvalue);
+	}
+
+	public void sel_dob_year(String dob_year) {
+
+		selectByValue(sel_date_year, dob_year);
+
+	}
+
+	public String firstoption_date_year() {
+		return firstSelectedOption(sel_date_year);
+	}
+
+	public void sel_dob_month(String dob_month) {
+
+		selectByText(sel_date_month, dob_month);
+
+	}
+
+	public String firstoption_dob_month() {
+		return firstSelectedOption(sel_date_month);
+	}
+
+	public void sel_dob_day(String dob_day) {
+
+		selectByText(sel_date_day, dob_day);
+
+	}
+
+	public String firstoption_dob_day() {
+		return firstSelectedOption(sel_date_day);
 	}
 
 }

@@ -12,16 +12,10 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import factory.DriverFactory;
-
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +24,6 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-
-import javax.xml.bind.DatatypeConverter;
 
 public class testbase extends DriverFactory {
 
@@ -291,6 +282,7 @@ public class testbase extends DriverFactory {
 			List<WebElement> webElements = element;
 			for (WebElement webElement : webElements) {
 				values.add(webElement.getText());
+				
 			}
 
 		} catch (Exception e) {
