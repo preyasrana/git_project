@@ -1,21 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="41.142">
-<testcase classname="Feature to Register test functionality" name="Check Register Functionality working or not with Valid Details" time="40.908">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.673">
+<testcase classname="Feature to Switchto test functionality" name="Check Switchto Functionality working or not" time="24.463">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
-Then firstname lastname gets placeholder name then verify...................passed
-When user enter firstname...................................................passed
-When user enter lastname....................................................passed
-When user enter address.....................................................passed
-When user hover on Emailid..................................................passed
-When user enter emailid.....................................................passed
-When user enter phone.......................................................passed
-When user upload photo......................................................passed
-When user click on gender...................................................passed
-When user click on Hobbies..................................................passed
-When user click on Languages................................................passed
-Then Verify Selected languages..............................................passed
-When user click on Skill....................................................passed
-When user select dateofbirth................................................passed
+When user click on windowlink...............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

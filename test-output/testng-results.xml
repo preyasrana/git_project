@@ -2,46 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45056" started-at="2022-05-16T11:08:51 IST" finished-at="2022-05-16T11:09:36 IST">
+  <suite name="Default suite" duration-ms="28336" started-at="2022-05-16T12:15:10 IST" finished-at="2022-05-16T12:15:39 IST">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@4516af24]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="45056" started-at="2022-05-16T11:08:51 IST" finished-at="2022-05-16T11:09:36 IST">
-      <class name="Runners.Learning_Registerrunner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="setUpClass" is-config="true" duration-ms="725" started-at="2022-05-16T11:08:51 IST" finished-at="2022-05-16T11:08:52 IST">
+    <test name="Default test" duration-ms="28336" started-at="2022-05-16T12:15:10 IST" finished-at="2022-05-16T12:15:39 IST">
+      <class name="Runners.Learning_runner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Learning_runner@4516af24]" name="setUpClass" is-config="true" duration-ms="698" started-at="2022-05-16T12:15:10 IST" finished-at="2022-05-16T12:15:11 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@29d2fa84]]>
+                <![CDATA[org.testng.TestRunner@370c7cc5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="runScenario" duration-ms="41001" started-at="2022-05-16T11:08:52 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-16T11:09:33 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@4516af24]" name="runScenario" duration-ms="24547" started-at="2022-05-16T12:15:11 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-16T12:15:36 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Check Register Functionality working or not with Valid Details"]]>
+                <![CDATA["Check Switchto Functionality working or not"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Feature to Register test functionality"]]>
+                <![CDATA["Feature to Switchto test functionality"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Learning_Registerrunner@4516af24]" name="tearDownClass" is-config="true" duration-ms="3297" started-at="2022-05-16T11:09:33 IST" finished-at="2022-05-16T11:09:36 IST">
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Learning_runner@4516af24]" name="tearDownClass" is-config="true" duration-ms="3053" started-at="2022-05-16T12:15:36 IST" finished-at="2022-05-16T12:15:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-      </class> <!-- Runners.Learning_Registerrunner -->
+      </class> <!-- Runners.Learning_runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -119,13 +119,24 @@ public class testbase extends DriverFactory {
 	}
 
 	// switchToFrame
-	public void switchToFrame(String nameOrId) {
+	public void switchToFrame(WebElement nameOrId) {
 		try {
 			driver.switchTo().frame(nameOrId);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
+	
+	public void switchToparent() {
+		try {
+			driver.switchTo().parentFrame();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
 
 	// switchToLatestWindow
 	public String switchToLatestWindow() {
@@ -282,7 +293,7 @@ public class testbase extends DriverFactory {
 			List<WebElement> webElements = element;
 			for (WebElement webElement : webElements) {
 				values.add(webElement.getText());
-				
+
 			}
 
 		} catch (Exception e) {
