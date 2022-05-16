@@ -126,7 +126,7 @@ public class testbase extends DriverFactory {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void switchToparent() {
 		try {
 			driver.switchTo().parentFrame();
@@ -134,20 +134,31 @@ public class testbase extends DriverFactory {
 			e.printStackTrace();
 		}
 	}
-	
-	
-	
 
 	// switchToLatestWindow
-	public String switchToLatestWindow() {
-		String parentWindow = driver.getWindowHandle();
+	String parentWindow;
+
+	public void switchToLatestWindow() {
+		parentWindow = driver.getWindowHandle();
 		Set<String> handles = driver.getWindowHandles();
 		for (String windowHandle : handles) {
 			if (!windowHandle.equals(parentWindow)) {
 				driver.switchTo().window(windowHandle);
 			}
 		}
-		return parentWindow;
+	}
+
+	public void switchToPartentWindow() {
+
+		driver.close();
+		try {
+
+			Thread.sleep(4000);
+			driver.switchTo().window(parentWindow);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	// refreshPage method

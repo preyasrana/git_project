@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.673">
-<testcase classname="Feature to Switchto test functionality" name="Check Switchto Functionality working or not" time="24.463">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="40.046">
+<testcase classname="Feature to Switchto test functionality" name="Check Switchto Functionality working or not" time="39.83">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
 When user click on windowlink...............................................passed
+Then verify open new tab window by default selected.........................passed
+When user click on new seperate window......................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

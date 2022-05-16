@@ -9,6 +9,7 @@ Feature: Feature to Switchto test functionality
     Given user is on Home Page
     When user click on windowlink
     Then verify open new tab window by default selected
+    When user click on new seperate window 
     
     
     

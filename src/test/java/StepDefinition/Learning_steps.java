@@ -22,4 +22,29 @@ public class Learning_steps {
 		// learning_step.switch_parentwindow();
 	}
 
+	@When("verify open new tab window by default selected")
+	public void verify_open_new_tab_window_by_default_selected() throws InterruptedException {
+
+		learning_step.click_on_btntabbed();
+		learning_step.switchToLatestWindow();
+		learning_step.click_on_Download();
+		learning_step.click_on_Documentation();
+		Thread.sleep(4000);
+		learning_step.switchToPartentWindow();
+
+	}
+
+	@When("user click on new seperate window")
+	public void user_click_on_new_seperate_window() throws InterruptedException {
+
+		learning_step.click_new_seperatewindow();
+		learning_step.click_on_btnseperate();
+		learning_step.switchToLatestWindow();
+		learning_step.click_on_Download();
+		learning_step.click_on_Documentation();
+		Thread.sleep(4000);
+		learning_step.switchToPartentWindow();
+
+	}
+
 }
