@@ -16,7 +16,6 @@ public class Learning_Page extends testbase {
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Widgets')]")
 	WebElement lbl_Widgets;
 	
-
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Windows')]")
 	WebElement lnk_Windows;
 
