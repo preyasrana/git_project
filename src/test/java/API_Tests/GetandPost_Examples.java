@@ -6,9 +6,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
-
 import java.util.Map;
-
 import org.apache.commons.collections4.map.HashedMap;
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;

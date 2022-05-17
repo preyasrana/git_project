@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2195" started-at="2022-05-17T12:03:25 IST" finished-at="2022-05-17T12:03:27 IST">
+  <suite name="Default suite" duration-ms="3392" started-at="2022-05-17T14:23:21 IST" finished-at="2022-05-17T14:23:24 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2195" started-at="2022-05-17T12:03:25 IST" finished-at="2022-05-17T12:03:27 IST">
-      <class name="API_Tests.GetandPost_Examples">
-        <test-method status="PASS" signature="testpost()[pri:0, instance:API_Tests.GetandPost_Examples@eb21112]" name="testpost" duration-ms="2140" started-at="2022-05-17T12:03:25 IST" finished-at="2022-05-17T12:03:27 IST">
+    <test name="Default test" duration-ms="3392" started-at="2022-05-17T14:23:21 IST" finished-at="2022-05-17T14:23:24 IST">
+      <class name="API_Tests.PutPatchDelete">
+        <test-method status="PASS" signature="testdelete()[pri:0, instance:API_Tests.PutPatchDelete@eb21112]" name="testdelete" duration-ms="2031" started-at="2022-05-17T14:23:21 IST" finished-at="2022-05-17T14:23:23 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testpost -->
-      </class> <!-- API_Tests.GetandPost_Examples -->
+        </test-method> <!-- testdelete -->
+        <test-method status="PASS" signature="testpatch()[pri:0, instance:API_Tests.PutPatchDelete@eb21112]" name="testpatch" duration-ms="524" started-at="2022-05-17T14:23:23 IST" finished-at="2022-05-17T14:23:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testpatch -->
+        <test-method status="PASS" signature="testput()[pri:0, instance:API_Tests.PutPatchDelete@eb21112]" name="testput" duration-ms="774" started-at="2022-05-17T14:23:23 IST" finished-at="2022-05-17T14:23:24 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testput -->
+      </class> <!-- API_Tests.PutPatchDelete -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
