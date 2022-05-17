@@ -4,14 +4,14 @@
 @feature
 Feature: Feature to Learning_Automation test functionality
 
-  @smoketest1
+  @smoketest
   Scenario: Check Switchto Functionality working or not
     Given user is on Home Page
     When user click on windowlink
     Then verify open new tab window by default selected
     When user click on new seperate window
 
-  @smoketest1
+  @smoketest
   Scenario: Check Accordian Functionality working or not
     Given user is on Home Page
     When user click on Accordianlink
