@@ -3,6 +3,8 @@ package API_Tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import static io.restassured.RestAssured.*;
+
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.*;
@@ -38,6 +40,24 @@ public class testExample {
 		 .body("data[1].email", equalTo("lindsay.ferguson@reqres.in"))
 		    .log().all();
 
+	}
+	
+	@Test
+	public void getdata() {
+
+		baseURI = "https://ergast.com/api";
+		
+		
+		given()
+	      .when()
+		   .get("/f1/2017/circuits.json")
+		.then()
+		 .statusCode(200)
+		 .and()
+		    .body("MRData.CircuitTable.Circuits.circuitId",hasSize(20))
+		 .and()
+		 .header("Content-Length", equalTo("4551"));
+		     
 	}
 
 }

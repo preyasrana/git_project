@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3392" started-at="2022-05-17T14:23:21 IST" finished-at="2022-05-17T14:23:24 IST">
+  <suite name="Default suite" duration-ms="3927" started-at="2022-05-17T15:21:52 IST" finished-at="2022-05-17T15:21:56 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3392" started-at="2022-05-17T14:23:21 IST" finished-at="2022-05-17T14:23:24 IST">
-      <class name="API_Tests.PutPatchDelete">
-        <test-method status="PASS" signature="testdelete()[pri:0, instance:API_Tests.PutPatchDelete@eb21112]" name="testdelete" duration-ms="2031" started-at="2022-05-17T14:23:21 IST" finished-at="2022-05-17T14:23:23 IST">
+    <test name="Default test" duration-ms="3927" started-at="2022-05-17T15:21:52 IST" finished-at="2022-05-17T15:21:56 IST">
+      <class name="API_Tests.testExample">
+        <test-method status="PASS" signature="getdata()[pri:0, instance:API_Tests.testExample@eb21112]" name="getdata" duration-ms="3316" started-at="2022-05-17T15:21:52 IST" finished-at="2022-05-17T15:21:55 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testdelete -->
-        <test-method status="PASS" signature="testpatch()[pri:0, instance:API_Tests.PutPatchDelete@eb21112]" name="testpatch" duration-ms="524" started-at="2022-05-17T14:23:23 IST" finished-at="2022-05-17T14:23:23 IST">
+        </test-method> <!-- getdata -->
+        <test-method status="PASS" signature="gettest1()[pri:0, instance:API_Tests.testExample@eb21112]" name="gettest1" duration-ms="237" started-at="2022-05-17T15:21:55 IST" finished-at="2022-05-17T15:21:55 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testpatch -->
-        <test-method status="PASS" signature="testput()[pri:0, instance:API_Tests.PutPatchDelete@eb21112]" name="testput" duration-ms="774" started-at="2022-05-17T14:23:23 IST" finished-at="2022-05-17T14:23:24 IST">
+        </test-method> <!-- gettest1 -->
+        <test-method status="PASS" signature="gettest2()[pri:0, instance:API_Tests.testExample@eb21112]" name="gettest2" duration-ms="328" started-at="2022-05-17T15:21:55 IST" finished-at="2022-05-17T15:21:56 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testput -->
-      </class> <!-- API_Tests.PutPatchDelete -->
+        </test-method> <!-- gettest2 -->
+      </class> <!-- API_Tests.testExample -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
