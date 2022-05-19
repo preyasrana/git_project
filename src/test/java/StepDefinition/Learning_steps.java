@@ -43,6 +43,20 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
+	
+	@When("user click on resizablelink")
+	public void user_click_on_resizablelink() throws InterruptedException {
+
+		learning_step.hover_interactions();
+		learning_step.click_resizable();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
 
 	@When("user click on Datepickerlink")
 	public void user_click_on_Datepickerlink() throws InterruptedException {
@@ -120,6 +134,20 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
+	
+	
+	
+	@When("user resize object")
+	public void user_resize_object() throws InterruptedException {
+
+		learning_step.resize_obj();
+		Thread.sleep(5000);
+		String widthheight  = learning_step.resize_width_height();
+		System.out.println(widthheight);
+
+	}
+	
+	
 
 	@Then("Datepicker should be visible")
 	public void Datepicker_should_be_visible() throws InterruptedException {

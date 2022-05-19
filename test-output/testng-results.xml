@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3927" started-at="2022-05-17T15:21:52 IST" finished-at="2022-05-17T15:21:56 IST">
+  <suite name="Default suite" duration-ms="29468" started-at="2022-05-19T17:59:25 IST" finished-at="2022-05-19T17:59:55 IST">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="3927" started-at="2022-05-17T15:21:52 IST" finished-at="2022-05-17T15:21:56 IST">
-      <class name="API_Tests.testExample">
-        <test-method status="PASS" signature="getdata()[pri:0, instance:API_Tests.testExample@eb21112]" name="getdata" duration-ms="3316" started-at="2022-05-17T15:21:52 IST" finished-at="2022-05-17T15:21:55 IST">
+    <test name="Default test" duration-ms="29468" started-at="2022-05-19T17:59:25 IST" finished-at="2022-05-19T17:59:55 IST">
+      <class name="Runners.Learning_runner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="setUpClass" is-config="true" duration-ms="684" started-at="2022-05-19T17:59:25 IST" finished-at="2022-05-19T17:59:26 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@7772d266]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getdata -->
-        <test-method status="PASS" signature="gettest1()[pri:0, instance:API_Tests.testExample@eb21112]" name="gettest1" duration-ms="237" started-at="2022-05-17T15:21:55 IST" finished-at="2022-05-17T15:21:55 IST">
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="runScenario" duration-ms="24761" started-at="2022-05-19T17:59:26 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-19T17:59:51 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check Resizable Functionality working or not"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Feature to Learning_Automation test functionality"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gettest1 -->
-        <test-method status="PASS" signature="gettest2()[pri:0, instance:API_Tests.testExample@eb21112]" name="gettest2" duration-ms="328" started-at="2022-05-17T15:21:55 IST" finished-at="2022-05-17T15:21:56 IST">
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Learning_runner@aecb35a]" name="tearDownClass" is-config="true" duration-ms="3982" started-at="2022-05-19T17:59:51 IST" finished-at="2022-05-19T17:59:55 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- gettest2 -->
-      </class> <!-- API_Tests.testExample -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runners.Learning_runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

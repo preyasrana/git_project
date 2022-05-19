@@ -16,11 +16,18 @@ public class Learning_Page extends testbase {
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Widgets')]")
 	WebElement lbl_Widgets;
 	
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Interactions ')]")
+	WebElement lbl_Interactions;
+	
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Windows')]")
 	WebElement lnk_Windows;
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),' Accordion ')]")
 	WebElement lnk_Accordion;
+	
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Resizable')]")
+	WebElement lnk_Resizable;
+	
 	
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),' Datepicker ')]")
 	WebElement lnk_datepicker;
@@ -69,7 +76,13 @@ public class Learning_Page extends testbase {
 	List<WebElement> ele_dob_days;
 	
 	
-
+	@FindBy(xpath = "//div[@class='ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se']")
+	WebElement ele_resize;
+	
+	@FindBy(xpath = "//div[@id='resizable']")
+	WebElement ele_resize_width_height;
+	
+	
 	public Learning_Page() {
 
 		PageFactory.initElements(driver, this);
@@ -90,6 +103,11 @@ public class Learning_Page extends testbase {
 		moveToElement(lbl_Widgets);
 
 	}
+	
+	public void hover_interactions() throws InterruptedException {
+		moveToElement(lbl_Interactions);
+
+	}
 
 	public void click_windows() {
 		isClickable(lnk_Windows);
@@ -101,6 +119,10 @@ public class Learning_Page extends testbase {
 	
 	public void click_datepicker() {
 		isClickable(lnk_datepicker);
+	}
+	
+	public void click_resizable() {
+		isClickable(lnk_Resizable);
 	}
 
 	public void switchframe_advertise() {
@@ -159,6 +181,18 @@ public class Learning_Page extends testbase {
 		isElementPresent(ele_dob_picker);
 		return getCurrentDay();
 		
+	}
+	
+	public void resize_obj() {
+		
+		resize(ele_resize, 250, 250);
+		
+	}
+	
+	public String resize_width_height() throws InterruptedException {
+
+		return getAttribute(ele_resize_width_height, "style");
+
 	}
 
 }

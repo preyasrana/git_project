@@ -27,6 +27,7 @@ import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 
 public class testbase extends DriverFactory {
 
@@ -55,6 +56,24 @@ public class testbase extends DriverFactory {
 			e.getStackTrace();
 		}
 		return value;
+	}
+
+	public void resize(WebElement elementToResize, int xOffset, int yOffset) {
+		try {
+			if (elementToResize.isDisplayed()) {
+				Actions action = new Actions(driver);
+				action.clickAndHold(elementToResize).moveByOffset(xOffset, yOffset).release().build().perform();
+			} else {
+				System.out.println("Element was not displayed to drag");
+			}
+		} catch (StaleElementReferenceException e) {
+			System.out.println(
+					"Element with " + elementToResize + "is not attached to the page document " + e.getStackTrace());
+		} catch (NoSuchElementException e) {
+			System.out.println("Element " + elementToResize + " was not found in DOM " + e.getStackTrace());
+		} catch (Exception e) {
+			System.out.println("Unable to resize" + elementToResize + " - " + e.getStackTrace());
+		}
 	}
 
 	// isElementPresent
