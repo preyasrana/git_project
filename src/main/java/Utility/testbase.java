@@ -404,6 +404,8 @@ public class testbase extends DriverFactory {
 		System.out.println(values);
 		return values;
 	}
+	
+	
 
 	public List<String> getMultipleText(List<WebElement> element) {
 		System.out.println("List size :: " + element.size());

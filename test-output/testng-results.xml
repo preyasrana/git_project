@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30229" started-at="2022-05-23T17:44:00 IST" finished-at="2022-05-23T17:44:30 IST">
+  <suite name="Default suite" duration-ms="63179" started-at="2022-05-23T18:44:38 IST" finished-at="2022-05-23T18:45:41 IST">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="30229" started-at="2022-05-23T17:44:00 IST" finished-at="2022-05-23T17:44:30 IST">
+    <test name="Default test" duration-ms="63179" started-at="2022-05-23T18:44:38 IST" finished-at="2022-05-23T18:45:41 IST">
       <class name="Runners.Learning_runner">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="setUpClass" is-config="true" duration-ms="736" started-at="2022-05-23T17:44:00 IST" finished-at="2022-05-23T17:44:00 IST">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="setUpClass" is-config="true" duration-ms="705" started-at="2022-05-23T18:44:38 IST" finished-at="2022-05-23T18:44:39 IST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1cba0321]]>
+                <![CDATA[org.testng.TestRunner@53ba1175]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="runScenario" duration-ms="25385" started-at="2022-05-23T17:44:00 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-23T17:44:26 IST">
+        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="runScenario" duration-ms="29571" started-at="2022-05-23T18:44:39 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-23T18:45:09 IST">
           <params>
             <param index="0">
               <value>
@@ -34,10 +34,41 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [None: , Readability , Single Line Coding , Method Chaining , Cross Browser Testing , Extent Reports , Data Driven Testing , Functional Testing] but found [Readability , Single Line Coding , Method Chaining , Cross Browser Testing , Extent Reports , Data Driven Testing , Functional Testing]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [None: , Readability , Single Line Coding , Method Chaining , Cross Browser Testing , Extent Reports , Data Driven Testing , Functional Testing] but found [Readability , Single Line Coding , Method Chaining , Cross Browser Testing , Extent Reports , Data Driven Testing , Functional Testing]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:47)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:31)
+at StepDefinition.Learning_steps.user_click_on_Default_Functionality_option(Learning_steps.java:265)
+at ✽.user click on Default Functionality option(file:///home/preyas.r@ah.zymrinc.com/Desktop/preyas/eclipse-workspace/git_project/src/test/resources/Features/Learning_Feature/learning.switchto.feature:40)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Learning_runner@aecb35a]" name="tearDownClass" is-config="true" duration-ms="4068" started-at="2022-05-23T17:44:26 IST" finished-at="2022-05-23T17:44:30 IST">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@aecb35a]" name="runScenario" duration-ms="28195" started-at="2022-05-23T18:45:09 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-23T18:45:37 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check dragdrop Functionality working or not"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Feature to Learning_Automation test functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Learning_runner@aecb35a]" name="tearDownClass" is-config="true" duration-ms="4668" started-at="2022-05-23T18:45:37 IST" finished-at="2022-05-23T18:45:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

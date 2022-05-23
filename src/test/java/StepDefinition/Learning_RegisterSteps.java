@@ -54,6 +54,7 @@ public class Learning_RegisterSteps {
 	public void user_click_on_submit() throws InterruptedException {
 
 		learning_reg.clicksubmit();
+
 	}
 
 	@When("user hover on Emailid")

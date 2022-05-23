@@ -60,6 +60,8 @@ public class ApplicationHooks {
 				byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 				scenario.attach(sourcePath, "image/png", screenshotName);
 				// scenario.attach("test-output/Screenshot", "image/png", screenshotName);
+				
+				
 			}
 
 			catch (Exception e) {

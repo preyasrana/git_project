@@ -106,12 +106,17 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//div[@class=' nav nav-tabs']//ul[@class='nav nav-tabs nav-stacked']//a[contains(text(),'Serialize')]")
 	WebElement lnk_Serialize;
+	
+	@FindBy(xpath = "//div[@class=' nav nav-tabs']//ul[@class='nav nav-tabs nav-stacked']//a[contains(text(),'Default Functionality ')]")
+	WebElement lnk_default_functionality;
 
 	@FindBy(xpath = "//div[@id='Serialize']//span[2]")
 	WebElement gettext_Serialize;
 
 	@FindBy(xpath = "//ul[@class='SerializeFunc']//li//b")
 	List<WebElement> lst_Serialize;
+	
+	
 
 	public Learning_Page() {
 
@@ -268,6 +273,11 @@ public class Learning_Page extends testbase {
 	public void click_on_serialize() {
 		isClickable(lnk_Serialize);
 	}
+	
+	public void click_on_default_functionality() {
+		isClickable(lnk_default_functionality);
+	}
+
 
 	public String gettext_serialized() {
 		return getText(gettext_Serialize);

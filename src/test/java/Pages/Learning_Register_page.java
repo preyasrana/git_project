@@ -83,6 +83,8 @@ public class Learning_Register_page extends testbase {
 	
 	public String get_validationmessage() {
 		// return price_label.getText();
+		
+		//waitForWebElementIsVisible(txt_firstname,30);
 		return getAttribute(txt_firstname, "validationMessage");
 	}
 

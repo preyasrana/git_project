@@ -31,19 +31,17 @@ Feature: Feature to Learning_Automation test functionality
     When user click on resizablelink
     When user resize object
 
-  @smoketest1
-  Scenario: Check dragdrop Functionality working or not
-    Given user is on Home Page
-    When user click on dragdropstaticlink
-    Then user dragdrop object
-    Then Verify object display or not
-
   @smoketest
   Scenario: Check Selectable Functionality working or not
     Given user is on Home Page
     When user click on Selectablelink
     When user click on Serialize option
     When verify list of serialized value
-    
-    
- 
+    When user click on Default Functionality option
+
+  @smoketest
+  Scenario: Check dragdrop Functionality working or not
+    Given user is on Home Page
+    When user click on dragdropstaticlink
+    Then user dragdrop object
+    Then Verify object display or not

@@ -4,6 +4,8 @@ import java.util.Iterator;
 import java.util.List;
 import org.openqa.selenium.Point;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
+
 import Pages.Learning_Page;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -14,6 +16,7 @@ public class Learning_steps {
 
 	String Actual_message;
 	String Expected_Message;
+	SoftAssert softAssert = new SoftAssert();
 
 	@When("user click on windowlink")
 	public void user_click_on_windowlink() throws InterruptedException {
@@ -237,21 +240,30 @@ public class Learning_steps {
 		Expected_Message = "None:";
 		Assert.assertEquals(Expected_Message, Actual_message);
 	}
-	
+
 	@When("verify list of serialized value")
 	public void verify_list_of_serialized_value() throws InterruptedException {
 
 		Thread.sleep(4000);
 		learning_step.list_serialized();
-		
-		
+
 		Actual_message = learning_step.gettext_serialized();
-		System.out.println("Actual_message ::"+Actual_message);
-		
+		System.out.println("Actual_message ::" + Actual_message);
+
 		Expected_Message = "Readability , Single Line Coding , Method Chaining , Cross Browser Testing , Extent Reports , Data Driven Testing , Functional Testing";
-		Assert.assertEquals(Expected_Message, Actual_message);
-		
+		//Assert.assertEquals(Expected_Message, Actual_message);
+		softAssert.assertEquals(Expected_Message, Actual_message);
+
+
 	}
-	
+
+	@When("user click on Default Functionality option")
+	public void user_click_on_Default_Functionality_option() throws InterruptedException {
+		
+		learning_step.click_on_default_functionality();
+		Thread.sleep(4000);
+		softAssert.assertAll();
+
+	}
 
 }
