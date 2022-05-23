@@ -38,11 +38,12 @@ Feature: Feature to Learning_Automation test functionality
     Then user dragdrop object
     Then Verify object display or not
 
-  @smoketest1
+  @smoketest
   Scenario: Check Selectable Functionality working or not
     Given user is on Home Page
     When user click on Selectablelink
-    When user click on Serialize option 
+    When user click on Serialize option
+    When verify list of serialized value
     
     
  

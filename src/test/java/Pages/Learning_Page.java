@@ -3,8 +3,10 @@ package Pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -20,7 +22,7 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Interactions ')]")
 	WebElement lbl_Interactions;
-	
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Drag and Drop')]")
 	WebElement lbl_dragdrop;
 
@@ -32,10 +34,10 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Resizable')]")
 	WebElement lnk_Resizable;
-	
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Static ')]")
 	WebElement lnk_staticdragdrop;
-	
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),' Datepicker ')]")
 	WebElement lnk_datepicker;
 
@@ -89,27 +91,28 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//div[@id='resizable']")
 	WebElement ele_resize_width_height;
-	
-	
+
 	@FindBy(xpath = "//div[@id='resizable']//div[3]")
 	WebElement ele_resize_width_height_new;
-	
+
 	@FindBy(xpath = "//div[@class='col-xs-10 col-xs-offset-2'][1]//img")
 	WebElement ele_from_drag;
-	
+
 	@FindBy(xpath = "//div[@id='droparea']")
 	WebElement ele_to_drop;
-	
+
 	@FindBy(xpath = "//div[@class='col-xs-4 col-xs-offset-2']//img")
 	List<WebElement> get_todrag_attribute;
-	
+
 	@FindBy(xpath = "//div[@class=' nav nav-tabs']//ul[@class='nav nav-tabs nav-stacked']//a[contains(text(),'Serialize')]")
 	WebElement lnk_Serialize;
-	
+
 	@FindBy(xpath = "//div[@id='Serialize']//span[2]")
 	WebElement gettext_Serialize;
-	
-	
+
+	@FindBy(xpath = "//ul[@class='SerializeFunc']//li//b")
+	List<WebElement> lst_Serialize;
+
 	public Learning_Page() {
 
 		PageFactory.initElements(driver, this);
@@ -135,7 +138,7 @@ public class Learning_Page extends testbase {
 		moveToElement(lbl_Interactions);
 
 	}
-	
+
 	public void hover_Dragdrop() throws InterruptedException {
 		moveToElement(lbl_dragdrop);
 
@@ -156,11 +159,11 @@ public class Learning_Page extends testbase {
 	public void click_resizable() {
 		isClickable(lnk_Resizable);
 	}
-	
+
 	public void click_staticdragdrop() {
 		isClickable(lnk_staticdragdrop);
 	}
-	
+
 	public void click_Selectable() {
 		isClickable(lnk_selectable);
 	}
@@ -227,23 +230,22 @@ public class Learning_Page extends testbase {
 		resize(ele_resize, 250, 280);
 
 	}
-	
+
 	public void dragdrop_obj() {
 
 		dragAndDrop(ele_from_drag, ele_to_drop);
-		
+
 	}
-	
+
 	public String get_fromdrag_attribute() {
 		return getAttribute(ele_from_drag, "src");
 	}
-	
+
 	public List<String> get_todrag_attribute() throws InterruptedException {
 
 		return getMultipleAttribute_value(get_todrag_attribute, "src");
 
 	}
-
 
 	public String resize_width_height() throws InterruptedException {
 
@@ -262,7 +264,7 @@ public class Learning_Page extends testbase {
 		return list;
 
 	}
-	
+
 	public void click_on_serialize() {
 		isClickable(lnk_Serialize);
 	}
@@ -270,4 +272,14 @@ public class Learning_Page extends testbase {
 	public String gettext_serialized() {
 		return getText(gettext_Serialize);
 	}
+
+	public List<String> list_serialized() throws InterruptedException {
+
+		return getMultipleText(lst_Serialize);
+
+	}
+	
+	
+	
+
 }
