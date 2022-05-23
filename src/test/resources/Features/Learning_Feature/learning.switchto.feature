@@ -25,9 +25,24 @@ Feature: Feature to Learning_Automation test functionality
     When user click on Datepicker icon
     Then Datepicker should be visible
 
-  @smoketest
+  @smoketest1
   Scenario: Check Resizable Functionality working or not
     Given user is on Home Page
     When user click on resizablelink
     When user resize object
+
+  @smoketest1
+  Scenario: Check dragdrop Functionality working or not
+    Given user is on Home Page
+    When user click on dragdropstaticlink
+    Then user dragdrop object
+    Then Verify object display or not
+
+  @smoketest1
+  Scenario: Check Selectable Functionality working or not
+    Given user is on Home Page
+    When user click on Selectablelink
+    When user click on Serialize option 
     
+    
+ 

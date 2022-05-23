@@ -1,9 +1,9 @@
 package StepDefinition;
 
+import java.util.Iterator;
 import java.util.List;
-
+import org.openqa.selenium.Point;
 import org.testng.Assert;
-
 import Pages.Learning_Page;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -43,12 +43,42 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
-	
+
 	@When("user click on resizablelink")
 	public void user_click_on_resizablelink() throws InterruptedException {
 
 		learning_step.hover_interactions();
 		learning_step.click_resizable();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
+
+	@When("user click on Selectablelink")
+	public void user_click_on_Selectablelink() throws InterruptedException {
+
+		learning_step.hover_interactions();
+		learning_step.click_Selectable();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
+
+	@When("user click on dragdropstaticlink")
+	public void user_click_on_dragdropstaticlink() throws InterruptedException {
+
+		learning_step.hover_interactions();
+		learning_step.hover_Dragdrop();
+		Thread.sleep(2000);
+		learning_step.click_staticdragdrop();
 		Thread.sleep(2000);
 		learning_step.switchframe_advertise();
 		Thread.sleep(2000);
@@ -134,20 +164,19 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
-	
-	
-	
+
 	@When("user resize object")
 	public void user_resize_object() throws InterruptedException {
 
 		learning_step.resize_obj();
 		Thread.sleep(5000);
-		String widthheight  = learning_step.resize_width_height();
+		String widthheight = learning_step.resize_width_height();
 		System.out.println(widthheight);
 
+		List<Integer> values = learning_step.resized_object();
+		System.out.println(values);
+
 	}
-	
-	
 
 	@Then("Datepicker should be visible")
 	public void Datepicker_should_be_visible() throws InterruptedException {
@@ -169,6 +198,44 @@ public class Learning_steps {
 				System.out.println("value not matched :: " + values.get(i));
 			}
 		}
+
+	}
+
+	@Then("user dragdrop object")
+	public void user_dragdrop_object() throws InterruptedException {
+
+		learning_step.dragdrop_obj();
+		Thread.sleep(8000);
+
+	}
+
+	@Then("Verify object display or not")
+	public void Verify_object_display_or_not() throws InterruptedException {
+
+		String fromdrag_text = learning_step.get_fromdrag_attribute();
+		System.out.println("fromdrag_text ::" + fromdrag_text);
+
+		List<String> to_drag_values = learning_step.get_todrag_attribute();
+		System.out.println(to_drag_values);
+
+		for (int i = 0; i < to_drag_values.size(); i++) {
+			if (to_drag_values.get(i).contentEquals(fromdrag_text)) {
+				System.out.println("true");
+			}
+		}
+
+	}
+
+	@When("user click on Serialize option")
+	public void user_click_on_Serialize_option() throws InterruptedException {
+
+		learning_step.click_on_serialize();
+
+		Actual_message = learning_step.gettext_serialized();
+		System.out.println(Actual_message);
+
+		Expected_Message = "None:";
+		Assert.assertEquals(Expected_Message, Actual_message);
 
 	}
 

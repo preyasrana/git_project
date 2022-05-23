@@ -13,6 +13,10 @@ public class Learning_Register_page extends testbase {
 
 	@FindBy(xpath = "//input[@ng-model='FirstName']")
 	WebElement txt_firstname;
+	
+	
+	@FindBy(xpath = "//button[@id='submitbtn']")
+	WebElement btn_submit;
 
 	@FindBy(xpath = "//input[@ng-model='LastName']")
 	WebElement txt_lastname;
@@ -76,6 +80,11 @@ public class Learning_Register_page extends testbase {
 		// return price_label.getText();
 		return getAttribute(txt_lastname, "placeholder");
 	}
+	
+	public String get_validationmessage() {
+		// return price_label.getText();
+		return getAttribute(txt_firstname, "validationMessage");
+	}
 
 	public void enter_firstname(String firstname) {
 		sendKeys(txt_firstname, firstname);
@@ -116,6 +125,10 @@ public class Learning_Register_page extends testbase {
 
 	public void clickongender() {
 		isClickable(radio_male_gender);
+	}
+	
+	public void clicksubmit() {
+		isClickable(btn_submit);
 	}
 
 	public void clickonHobbies() {

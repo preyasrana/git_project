@@ -50,6 +50,12 @@ public class Learning_RegisterSteps {
 		learning_reg.enter_address(address);
 	}
 
+	@When("user click on submit")
+	public void user_click_on_submit() throws InterruptedException {
+
+		learning_reg.clicksubmit();
+	}
+
 	@When("user hover on Emailid")
 	public void user_hover_on_Emailid() throws InterruptedException {
 
@@ -58,6 +64,14 @@ public class Learning_RegisterSteps {
 
 		Expected_Message = "Provide a valid email id for further updates";
 		Assert.assertEquals(Expected_Message, Actual_message);
+
+	}
+
+	@When("get Validation messages")
+	public void get_Validation_messages() throws InterruptedException {
+
+		System.out.println(learning_reg.get_validationmessage());
+		Thread.sleep(5000);
 
 	}
 
@@ -135,7 +149,7 @@ public class Learning_RegisterSteps {
 		Expected_Message = "1991";
 		Assert.assertEquals(Expected_Message, Actual_message);
 
-		// *****   sel_dob_month  **********
+		// ***** sel_dob_month **********
 		learning_reg.sel_dob_month("April");
 
 		Actual_message = learning_reg.firstoption_dob_month();
@@ -143,7 +157,6 @@ public class Learning_RegisterSteps {
 
 		Expected_Message = "April";
 		Assert.assertEquals(Expected_Message, Actual_message);
-		
 
 		// sel_dob_day
 		learning_reg.sel_dob_day("27");
@@ -152,7 +165,6 @@ public class Learning_RegisterSteps {
 
 		Expected_Message = "27";
 		Assert.assertEquals(Expected_Message, Actual_message);
-		
 
 		Thread.sleep(5000);
 	}
