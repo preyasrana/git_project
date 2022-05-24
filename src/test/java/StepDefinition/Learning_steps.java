@@ -14,7 +14,7 @@ public class Learning_steps {
 
 	String Actual_message;
 	String Expected_Message;
-	
+
 	@When("user click on windowlink")
 	public void user_click_on_windowlink() throws InterruptedException {
 
@@ -67,6 +67,20 @@ public class Learning_steps {
 		learning_step.switchframe_advertise();
 		Thread.sleep(2000);
 		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
+
+	@When("user click on youtubelink")
+	public void user_click_on_youtubelink() throws InterruptedException {
+
+		learning_step.hover_video();
+		learning_step.click_youtube();
+		Thread.sleep(2000);
+		// learning_step.switchframe_advertise();
+		// Thread.sleep(2000);
+		// learning_step.click_windows_close();
 
 		Thread.sleep(5000);
 
@@ -249,18 +263,16 @@ public class Learning_steps {
 
 		Expected_Message = "Readability , Single Line Coding , Method Chaining , Cross Browser Testing , Extent Reports , Data Driven Testing , Functional Testing";
 		Assert.assertEquals(Expected_Message, Actual_message);
-		//softAssert.assertEquals(Expected_Message, Actual_message);
-		//learning_step.softAssert.assertEquals(Expected_Message, Actual_message);
+		// softAssert.assertEquals(Expected_Message, Actual_message);
+		// learning_step.softAssert.assertEquals(Expected_Message, Actual_message);
 
 	}
 
 	@When("user click on Default Functionality option")
 	public void user_click_on_Default_Functionality_option() throws InterruptedException {
-		
+
 		learning_step.click_on_default_functionality();
 		Thread.sleep(4000);
-
-		
 
 	}
 

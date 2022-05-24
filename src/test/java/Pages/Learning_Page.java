@@ -26,6 +26,12 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Drag and Drop')]")
 	WebElement lbl_dragdrop;
+	
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Video')]")
+	WebElement lbl_video;
+	
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Youtube')]")
+	WebElement lnk_youtube;
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Windows')]")
 	WebElement lnk_Windows;
@@ -140,6 +146,11 @@ public class Learning_Page extends testbase {
 		moveToElement(lbl_Widgets);
 
 	}
+	
+	public void hover_video() throws InterruptedException {
+		moveToElement(lbl_video);
+
+	}
 
 	public void hover_interactions() throws InterruptedException {
 		moveToElement(lbl_Interactions);
@@ -159,6 +170,10 @@ public class Learning_Page extends testbase {
 		isClickable(lnk_Accordion);
 	}
 
+	public void click_youtube() {
+		isClickable(lnk_youtube);
+	}
+	
 	public void click_datepicker() {
 		isClickable(lnk_datepicker);
 	}
