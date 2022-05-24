@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue May 24 15:51:32 IST 2022</td>
+<td>Started on:</td><td>Tue May 24 17:27:13 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>23 seconds (23937 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39472 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,18 +67,37 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='Runners.Learning_runner.runScenario()'><b>runScenario</b><br>Test class: Runners.Learning_runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Check Youtube Functionality working or not", "Feature to Learning_Automation test functionality"</td>
-<td></td>
-<td>19</td>
-<td>Runners.Learning_runner@6366ebe0</td></tr>
+<td title='Runners.MyAccount_Runner.runScenario()'><b>runScenario</b><br>Test class: Runners.MyAccount_Runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update my account page related info", "feature to My account Page on Account Details functionality"</td>
+<td><div><pre>java.lang.AssertionError: expected [Account details changed successfully.] but found [Account details changed successfully.1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at StepDefinition.MyAccountsteps.click_on_savechanges_button(MyAccountsteps.java:144)
+	at ✽.click on savechanges button(file:///home/preyas.r@ah.zymrinc.com/Desktop/preyas/eclipse-workspace/git_project/src/test/resources/Features/myaccount/001.myaccount.accdetails.feature:27)
+</pre></div><a href='#' onClick='toggleBox("stack-trace537346910", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace537346910'><pre>java.lang.AssertionError: expected [Account details changed successfully.] but found [Account details changed successfully.1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at StepDefinition.MyAccountsteps.click_on_savechanges_button(MyAccountsteps.java:144)
+	at ✽.click on savechanges button(file:///home/preyas.r@ah.zymrinc.com/Desktop/preyas/eclipse-workspace/git_project/src/test/resources/Features/myaccount/001.myaccount.accdetails.feature:27)
+</pre></div></td>
+<td>34</td>
+<td>Runners.MyAccount_Runner@6366ebe0</td></tr>
 </table><p>
 </body>
 </html>

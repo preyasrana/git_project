@@ -26,10 +26,10 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Drag and Drop')]")
 	WebElement lbl_dragdrop;
-	
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Video')]")
 	WebElement lbl_video;
-	
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Youtube')]")
 	WebElement lnk_youtube;
 
@@ -113,7 +113,7 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//div[@class=' nav nav-tabs']//ul[@class='nav nav-tabs nav-stacked']//a[contains(text(),'Serialize')]")
 	WebElement lnk_Serialize;
-	
+
 	@FindBy(xpath = "//div[@class=' nav nav-tabs']//ul[@class='nav nav-tabs nav-stacked']//a[contains(text(),'Default Functionality ')]")
 	WebElement lnk_default_functionality;
 
@@ -122,14 +122,55 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='SerializeFunc']//li//b")
 	List<WebElement> lst_Serialize;
-	
-	
-	
+
+	// Video player elements
+	@FindBy(xpath = "//div[@class='ytp-cued-thumbnail-overlay']")
+	WebElement ele_videoElement;
+
+	@FindBy(xpath = "//div[@class='ytp-cued-thumbnail-overlay']//button[@class='ytp-large-play-button ytp-button']")
+	WebElement btn_playvideo;
+
+	@FindBy(xpath = "//span[@class='ytp-time-current']")
+	WebElement ele_video_currentPlayTime;
 
 	public Learning_Page() {
 
 		PageFactory.initElements(driver, this);
 	}
+
+	public void click_btn_playvideo() {
+		isClickable(btn_playvideo);
+	}
+
+	public boolean isVideoPlaying(WebElement ele) {
+		return isVideoPlaying(ele);
+	}
+	
+	public void playVideo() {
+        try {
+            if (!isVideoPlaying(btn_playvideo)) {
+            	click_btn_playvideo();
+            }
+        } catch (Exception e) {
+
+        }
+    }
+	
+	  public void pauseVideo() {
+	        try {
+	            if (isVideoPlaying(btn_playvideo)) {
+	            	click_btn_playvideo();
+	            }
+	            Thread.sleep(1000);
+	        } catch (Exception e) {
+
+	        }
+	    }
+
+	
+	private boolean isVideoPlaying_pause(WebElement playButtonEle) {
+        return playButtonEle.getAttribute("title").contains("Pause");
+    }
 
 	public List<String> dob_days() throws InterruptedException {
 
@@ -146,7 +187,7 @@ public class Learning_Page extends testbase {
 		moveToElement(lbl_Widgets);
 
 	}
-	
+
 	public void hover_video() throws InterruptedException {
 		moveToElement(lbl_video);
 
@@ -173,7 +214,7 @@ public class Learning_Page extends testbase {
 	public void click_youtube() {
 		isClickable(lnk_youtube);
 	}
-	
+
 	public void click_datepicker() {
 		isClickable(lnk_datepicker);
 	}
@@ -290,11 +331,10 @@ public class Learning_Page extends testbase {
 	public void click_on_serialize() {
 		isClickable(lnk_Serialize);
 	}
-	
+
 	public void click_on_default_functionality() {
 		isClickable(lnk_default_functionality);
 	}
-
 
 	public String gettext_serialized() {
 		return getText(gettext_Serialize);
@@ -305,8 +345,7 @@ public class Learning_Page extends testbase {
 		return getMultipleText(lst_Serialize);
 
 	}
-	
-	
-	
+
+	// Video Player Methods
 
 }

@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="19.847">
-<testcase classname="Feature to Learning_Automation test functionality" name="Check Youtube Functionality working or not" time="19.62">
-<system-out><![CDATA[Given user is on Home Page..................................................passed
-When user click on youtubelink..............................................passed
-]]></system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="35.062">
+<testcase classname="feature to My account Page on Account Details functionality" name="Update my account page related info" time="34.822">
+<failure message="expected [Account details changed successfully.] but found [Account details changed successfully.1]" type="java.lang.AssertionError"><![CDATA[Given user is on Home Page..................................................passed
+When user click on Myaccount link...........................................passed
+Then user navigate to Register Page.........................................passed
+When user has enter "<emailid>" & "<password>"..............................passed
+And click on login button...................................................passed
+Then user navigate to myaccount page........................................passed
+And click on Accountdetail link.............................................passed
+And click on savechanges button.............................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [Account details changed successfully.] but found [Account details changed successfully.1]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at StepDefinition.MyAccountsteps.click_on_savechanges_button(MyAccountsteps.java:144)
+	at ✽.click on savechanges button(file:///home/preyas.r@ah.zymrinc.com/Desktop/preyas/eclipse-workspace/git_project/src/test/resources/Features/myaccount/001.myaccount.accdetails.feature:27)
+]]></failure>
 </testcase>
 </testsuite>

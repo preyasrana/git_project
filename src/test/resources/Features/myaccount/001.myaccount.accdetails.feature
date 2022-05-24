@@ -23,7 +23,7 @@ Feature: feature to My account Page on Account Details functionality
     And click on login button
     Then user navigate to myaccount page
     And click on Accountdetail link
-    When user has entered profiledata "<firstname>" & "<lastname>"
+   When user has entered profiledata "<firstname>" & "<lastname>"
     And click on savechanges button
     	
     Examples:		

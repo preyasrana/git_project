@@ -4,13 +4,13 @@
 @feature
 Feature: Feature to Register test functionality
 
-  @smoketest1
+  @smoketest
   Scenario: Check Register Functionality working or not with Valid Details
     Given user is on Home Page
     Then firstname lastname gets placeholder name then verify
     When user enter firstname
       | preyas |
-    When user enter lastname
+   When user enter lastname
       | rana |
     When user enter address
       | testing message by me |
@@ -27,7 +27,7 @@ Feature: Feature to Register test functionality
     When user click on Skill
     When user select dateofbirth
 
-  @smoketest
+  @smoketest1
   Scenario: Check Register Functionality working or not with Valid Details
     Given user is on Home Page
     When user click on submit
