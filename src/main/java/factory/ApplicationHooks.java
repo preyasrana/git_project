@@ -4,6 +4,7 @@ import java.util.Properties;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.asserts.SoftAssert;
 
 import Utility.ConfigReader;
 import io.cucumber.java.After;
@@ -17,6 +18,9 @@ public class ApplicationHooks {
 	private static WebDriver driver;
 	private ConfigReader configReader;
 	Properties prop;
+	//public  SoftAssert softAssert = new SoftAssert();
+	
+	
 
 	/*
 	 * @Before(order = 0)
@@ -67,6 +71,7 @@ public class ApplicationHooks {
 			catch (Exception e) {
 				// TODO: handle exception
 			}
+			//softAssert.assertAll();
 
 		}
 	}

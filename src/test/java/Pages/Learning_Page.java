@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
 
 import Utility.testbase;
 
@@ -115,6 +116,7 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='SerializeFunc']//li//b")
 	List<WebElement> lst_Serialize;
+	
 	
 	
 
