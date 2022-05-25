@@ -1,13 +1,8 @@
 package StepDefinition;
 
-import java.util.Iterator;
 import java.util.List;
-import java.util.Properties;
-
-import org.openqa.selenium.Point;
 import org.testng.Assert;
 import Pages.Learning_Page;
-import Utility.ConfigReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -80,6 +75,20 @@ public class Learning_steps {
 
 		learning_step.hover_video();
 		learning_step.click_youtube();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
+	
+	@When("user click on loaderlink")
+	public void user_click_on_loaderlink() throws InterruptedException {
+
+		learning_step.hover_more();
+		learning_step.click_loader();
 		Thread.sleep(2000);
 		learning_step.switchframe_advertise();
 		Thread.sleep(2000);
@@ -201,6 +210,23 @@ public class Learning_steps {
 
 		learning_step.click_file_download();
 	}
+	
+	@When("user click on run button")
+	public void user_click_on_run_button() throws InterruptedException {
+
+		learning_step.click_loader_run();
+	}
+	
+	@Then("loader please wait display or not & verify popup")
+	public void loader_please_wait_display_or_not_verify_popup() throws InterruptedException {
+ 
+		learning_step.loader_verify();
+		learning_step.popup_verify();
+		learning_step.click_popup_close();
+		Thread.sleep(5000);
+	
+	}
+	
 
 	@When("user resize object")
 	public void user_resize_object() throws InterruptedException {

@@ -52,11 +52,16 @@ Feature: Feature to Learning_Automation test functionality
     When user click on youtubelink
     Then user has start video
 
-  @smoketest
+  @smoketest1
   Scenario: Check Filedownload functionality working or not
     Given user is on Home Page
     When user click on filedownloadlink
     Then verify Download button should be display & clickable
     Then Verify Filedownloaded or not
-    
-  
+
+  @smoketest
+  Scenario: Check loader functionality working or not
+     Given user is on Home Page
+     When user click on loaderlink
+     When user click on run button
+     Then loader please wait display or not & verify popup

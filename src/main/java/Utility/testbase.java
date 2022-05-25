@@ -66,7 +66,7 @@ public class testbase extends DriverFactory {
 	// isdisplay
 	public boolean isdisplay(WebElement element) {
 		boolean value = false;
-		waitForWebElementIsVisible(element, 10);
+		waitForWebElementIsVisible(element, 30);
 		try {
 			value = element.isDisplayed();
 		} catch (Exception e) {
@@ -130,6 +130,8 @@ public class testbase extends DriverFactory {
 	// isElementPresent
 	public boolean isElementPresent(WebElement element) {
 		try {
+			
+			waitForWebElementIsVisible(element, 30);
 			if (element.isDisplayed())
 				System.out.println("Element presend on screen ***********" + element);
 			return true;
@@ -181,6 +183,7 @@ public class testbase extends DriverFactory {
 		File dir = new File(downloadPath);
 		File[] dirContents = dir.listFiles();
 
+		
 		for (int i = 0; i < dirContents.length; i++) {
 			if (dirContents[i].getName().equals(fileName)) {
 				// File has been found, it can now be deleted:

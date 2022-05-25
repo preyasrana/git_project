@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="26.156">
-<testcase classname="Feature to Learning_Automation test functionality" name="Check Filedownload functionality working or not" time="25.905">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="53.266">
+<testcase classname="Feature to Learning_Automation test functionality" name="Check loader functionality working or not" time="53.022">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
-When user click on filedownloadlink.........................................passed
-Then verify Download button should be display & clickable...................passed
-Then Verify Filedownloaded or not...........................................passed
+When user click on loaderlink...............................................passed
+When user click on run button...............................................passed
+Then loader please wait display or not & verify popup.......................passed
 ]]></system-out>
 </testcase>
 </testsuite>

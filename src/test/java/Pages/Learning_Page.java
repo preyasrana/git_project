@@ -46,6 +46,9 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'File Download')]")
 	WebElement lnk_filedownload;
+	
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Loader')]")
+	WebElement lnk_loader;
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Resizable')]")
 	WebElement lnk_Resizable;
@@ -152,6 +155,22 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//div[@class='cont_box']//div[1]//a[contains(text(),'Download')]")
 	WebElement btn_filedownload;
+	
+	@FindBy(xpath = "//div[@class='panel-body']//button[contains(text(),'Run')]")
+	WebElement btn_loader_run;
+	
+	@FindBy(xpath = "//div[@class='blockUI blockMsg blockPage']")
+	WebElement loader_pleasewait;
+	
+	@FindBy(xpath = "//div[@class='modal-content']//h4")
+	WebElement popup_header_title;
+	
+	@FindBy(xpath = "//div[@class='modal-content']//button[contains(text(),'Close')]")
+	WebElement btn_popup_close;
+	
+	
+	
+	
 
 	public Learning_Page() {
 
@@ -257,6 +276,10 @@ public class Learning_Page extends testbase {
 	public void click_filedownload() {
 		isClickable(lnk_filedownload);
 	}
+	
+	public void click_loader() {
+		isClickable(lnk_loader);
+	}
 
 	public void click_windows() {
 		isClickable(lnk_Windows);
@@ -265,11 +288,44 @@ public class Learning_Page extends testbase {
 	public void click_accordion() {
 		isClickable(lnk_Accordion);
 	}
+	
+	public void click_popup_close() {
+		isClickable(btn_popup_close);
+	}
 
 	public void click_file_download() throws InterruptedException {
 		if (isElementPresent(btn_filedownload)) {
 			
 			isClickable(btn_filedownload);
+			Thread.sleep(5000);
+		}
+	}
+	
+	public void loader_verify() throws InterruptedException {
+		if (isElementPresent(loader_pleasewait)) {
+			
+			isdisplay(loader_pleasewait);
+			  
+			Thread.sleep(5000);
+		}
+		
+	}
+	
+	
+	public void popup_verify() throws InterruptedException {
+		if (isElementPresent(popup_header_title)) {
+			
+			isdisplay(popup_header_title);
+			  
+			Thread.sleep(5000);
+		}
+		
+	}
+	
+	public void click_loader_run() throws InterruptedException {
+		if (isElementPresent(btn_loader_run)) {
+			
+			isClickable(btn_loader_run);
 			Thread.sleep(5000);
 		}
 	}
