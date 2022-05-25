@@ -32,6 +32,9 @@ public class Learning_Page extends testbase {
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Video')]")
 	WebElement lbl_video;
 
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'More')]")
+	WebElement lbl_more;
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Youtube')]")
 	WebElement lnk_youtube;
 
@@ -40,6 +43,9 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),' Accordion ')]")
 	WebElement lnk_Accordion;
+
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'File Download')]")
+	WebElement lnk_filedownload;
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Resizable')]")
 	WebElement lnk_Resizable;
@@ -144,6 +150,9 @@ public class Learning_Page extends testbase {
 	@FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/wPECeNP1BoY']")
 	WebElement iframe_videoplayer;
 
+	@FindBy(xpath = "//div[@class='cont_box']//div[1]//a[contains(text(),'Download')]")
+	WebElement btn_filedownload;
+
 	public Learning_Page() {
 
 		PageFactory.initElements(driver, this);
@@ -193,14 +202,11 @@ public class Learning_Page extends testbase {
 		}
 		return null;
 	}
-	
-
-
 
 	public void hoverVideoPlayer() {
 
 		moveToElement(ele_videoElement);
-		//waitForWebElementIsVisible(ele_videoElement, 30);
+		// waitForWebElementIsVisible(ele_videoElement, 30);
 
 	}
 
@@ -243,12 +249,29 @@ public class Learning_Page extends testbase {
 
 	}
 
+	public void hover_more() throws InterruptedException {
+		moveToElement(lbl_more);
+
+	}
+
+	public void click_filedownload() {
+		isClickable(lnk_filedownload);
+	}
+
 	public void click_windows() {
 		isClickable(lnk_Windows);
 	}
 
 	public void click_accordion() {
 		isClickable(lnk_Accordion);
+	}
+
+	public void click_file_download() throws InterruptedException {
+		if (isElementPresent(btn_filedownload)) {
+			
+			isClickable(btn_filedownload);
+			Thread.sleep(5000);
+		}
 	}
 
 	public void click_youtube() {

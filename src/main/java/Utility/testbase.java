@@ -20,11 +20,13 @@ import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Properties;
 import java.util.Random;
 import java.util.Set;
 import java.util.TimeZone;
@@ -41,9 +43,14 @@ public class testbase extends DriverFactory {
 
 	public String Expected_Message;
 	public String Actual_message;
+	public Properties prop = new Properties();
+	public ConfigReader configreader = new ConfigReader();
+	public SoftAssert softAssert = new SoftAssert();
 	
-	public  SoftAssert softAssert = new SoftAssert();
 
+	
+	
+	
 	// waitForWebElementIsClickable
 	public void waitForWebElementIsClickable(WebElement webElement, int time) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
@@ -56,7 +63,6 @@ public class testbase extends DriverFactory {
 		wait.until(ExpectedConditions.visibilityOf(webElement));
 	}
 
-	
 	// isdisplay
 	public boolean isdisplay(WebElement element) {
 		boolean value = false;
@@ -138,7 +144,7 @@ public class testbase extends DriverFactory {
 		boolean value = false;
 
 		System.out.println(driver);
-		waitForWebElementIsClickable(element, 10);
+		waitForWebElementIsClickable(element, 30);
 
 		try {
 
@@ -169,6 +175,21 @@ public class testbase extends DriverFactory {
 			e.getStackTrace();
 		}
 		return value;
+	}
+
+	public boolean isFileDownloaded(String downloadPath, String fileName) {
+		File dir = new File(downloadPath);
+		File[] dirContents = dir.listFiles();
+
+		for (int i = 0; i < dirContents.length; i++) {
+			if (dirContents[i].getName().equals(fileName)) {
+				// File has been found, it can now be deleted:
+				System.out.println("file downloaded are equal");
+				dirContents[i].delete();
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public boolean isClickable(List<WebElement> element) {
@@ -339,6 +360,8 @@ public class testbase extends DriverFactory {
 
 	// moveToElement
 	public void moveToElement(WebElement element) {
+
+		waitForWebElementIsVisible(element, 30);
 		try {
 			Actions actions = new Actions(driver);
 			actions.moveToElement(element).build().perform();
@@ -414,8 +437,6 @@ public class testbase extends DriverFactory {
 		System.out.println(values);
 		return values;
 	}
-	
-	
 
 	public List<String> getMultipleText(List<WebElement> element) {
 		System.out.println("List size :: " + element.size());
@@ -726,14 +747,7 @@ public class testbase extends DriverFactory {
 			}
 		}
 	}
-	
-	
-	//Video Player Methods
-	
-	
-	
-	 
-	  
-	
+
+	// Video Player Methods
 
 }

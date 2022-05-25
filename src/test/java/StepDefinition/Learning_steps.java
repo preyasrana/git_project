@@ -2,9 +2,12 @@ package StepDefinition;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Properties;
+
 import org.openqa.selenium.Point;
 import org.testng.Assert;
 import Pages.Learning_Page;
+import Utility.ConfigReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -116,6 +119,20 @@ public class Learning_steps {
 
 	}
 
+	@When("user click on filedownloadlink")
+	public void user_click_on_filedownloadlink() throws InterruptedException {
+
+		learning_step.hover_more();
+		learning_step.click_filedownload();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
+
 	@When("verify open new tab window by default selected")
 	public void verify_open_new_tab_window_by_default_selected() throws InterruptedException {
 
@@ -177,6 +194,12 @@ public class Learning_steps {
 		learning_step.click_dob_picker_ico();
 		Thread.sleep(5000);
 
+	}
+
+	@When("verify Download button should be display & clickable")
+	public void verify_Download_button_should_be_display_clickable() throws InterruptedException {
+
+		learning_step.click_file_download();
 	}
 
 	@When("user resize object")
@@ -279,21 +302,27 @@ public class Learning_steps {
 	@Then("user has start video")
 	public void user_has_start_video() throws InterruptedException {
 
-		
 		learning_step.switchframe_video();
 
 		learning_step.playVideo();
-		
+
 		Thread.sleep(5000);
-		
+
 		learning_step.pauseVideo();
-		
+
 		Thread.sleep(5000);
-		
+
 		learning_step.playVideo();
 
 	}
-	
 
+	@Then("Verify Filedownloaded or not")
+	public void Verify_Filedownloaded_or_not() throws InterruptedException {
+
+		learning_step.isFileDownloaded(learning_step.configreader.init_prop().getProperty("file_download_path"),
+
+				learning_step.configreader.init_prop().getProperty("file_download_name"));
+
+	}
 
 }

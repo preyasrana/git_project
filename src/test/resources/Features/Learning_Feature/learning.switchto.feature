@@ -46,8 +46,17 @@ Feature: Feature to Learning_Automation test functionality
     Then user dragdrop object
     Then Verify object display or not
 
-  @smoketest
+  @smoketest1
   Scenario: Check Youtube Functionality working or not
     Given user is on Home Page
     When user click on youtubelink
     Then user has start video
+
+  @smoketest
+  Scenario: Check Filedownload functionality working or not
+    Given user is on Home Page
+    When user click on filedownloadlink
+    Then verify Download button should be display & clickable
+    Then Verify Filedownloaded or not
+    
+  
