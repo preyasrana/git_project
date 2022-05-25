@@ -46,7 +46,7 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'File Download')]")
 	WebElement lnk_filedownload;
-	
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'Loader')]")
 	WebElement lnk_loader;
 
@@ -55,6 +55,9 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Static ')]")
 	WebElement lnk_staticdragdrop;
+
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'JQuery ProgressBar')]")
+	WebElement lnk_progressbar;
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),' Datepicker ')]")
 	WebElement lnk_datepicker;
@@ -155,22 +158,62 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//div[@class='cont_box']//div[1]//a[contains(text(),'Download')]")
 	WebElement btn_filedownload;
-	
+
 	@FindBy(xpath = "//div[@class='panel-body']//button[contains(text(),'Run')]")
 	WebElement btn_loader_run;
-	
+
 	@FindBy(xpath = "//div[@class='blockUI blockMsg blockPage']")
 	WebElement loader_pleasewait;
-	
+
 	@FindBy(xpath = "//div[@class='modal-content']//h4")
 	WebElement popup_header_title;
-	
+
 	@FindBy(xpath = "//div[@class='modal-content']//button[contains(text(),'Close')]")
 	WebElement btn_popup_close;
+
+	@FindBy(xpath = "//div[@id='dialog']//div[@class='progress-label'][contains(text(),'Complete!')]")
+	WebElement lbl_progress;
+
+	@FindBy(xpath = "//div[@class='container']//button[@id='downloadButton'][contains(text(),'Start Download')]")
+	WebElement btn_startprogress;
+
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[@href='ProgressBar.html']")
+	WebElement lnk_download_progressbar;
+
+	@FindBy(xpath = "//button[@id='cricle-btn']")
+	WebElement btn_prgdownload;
+
+	@FindBy(xpath = "//div[@class='progressbar-text'][contains(text(),'100')]")
+	WebElement prg_download100;
 	
 	
 	
+
+	public boolean display_downloadprogresslbl() {
+		return isdisplay(prg_download100);
+
+	}
 	
+	public void click_btn_prgdownload() {
+
+		isClickable(btn_prgdownload);
+	}
+	
+	public void click_lnk_prgdownload() {
+
+		isClickable(lnk_download_progressbar);
+	}
+
+
+	public boolean display_progresslbl() {
+		return isdisplay(lbl_progress);
+
+	}
+
+	public void click_btn_progress() {
+
+		isClickable(btn_startprogress);
+	}
 
 	public Learning_Page() {
 
@@ -276,7 +319,7 @@ public class Learning_Page extends testbase {
 	public void click_filedownload() {
 		isClickable(lnk_filedownload);
 	}
-	
+
 	public void click_loader() {
 		isClickable(lnk_loader);
 	}
@@ -288,43 +331,42 @@ public class Learning_Page extends testbase {
 	public void click_accordion() {
 		isClickable(lnk_Accordion);
 	}
-	
+
 	public void click_popup_close() {
 		isClickable(btn_popup_close);
 	}
 
 	public void click_file_download() throws InterruptedException {
 		if (isElementPresent(btn_filedownload)) {
-			
+
 			isClickable(btn_filedownload);
 			Thread.sleep(5000);
 		}
 	}
-	
+
 	public void loader_verify() throws InterruptedException {
 		if (isElementPresent(loader_pleasewait)) {
-			
+
 			isdisplay(loader_pleasewait);
-			  
+
 			Thread.sleep(5000);
 		}
-		
+
 	}
-	
-	
+
 	public void popup_verify() throws InterruptedException {
 		if (isElementPresent(popup_header_title)) {
-			
+
 			isdisplay(popup_header_title);
-			  
+
 			Thread.sleep(5000);
 		}
-		
+
 	}
-	
+
 	public void click_loader_run() throws InterruptedException {
 		if (isElementPresent(btn_loader_run)) {
-			
+
 			isClickable(btn_loader_run);
 			Thread.sleep(5000);
 		}
@@ -453,6 +495,10 @@ public class Learning_Page extends testbase {
 
 	public void click_on_serialize() {
 		isClickable(lnk_Serialize);
+	}
+
+	public void click_on_progressbar() {
+		isClickable(lnk_progressbar);
 	}
 
 	public void click_on_default_functionality() {

@@ -46,11 +46,7 @@ public class testbase extends DriverFactory {
 	public Properties prop = new Properties();
 	public ConfigReader configreader = new ConfigReader();
 	public SoftAssert softAssert = new SoftAssert();
-	
 
-	
-	
-	
 	// waitForWebElementIsClickable
 	public void waitForWebElementIsClickable(WebElement webElement, int time) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
@@ -130,7 +126,7 @@ public class testbase extends DriverFactory {
 	// isElementPresent
 	public boolean isElementPresent(WebElement element) {
 		try {
-			
+
 			waitForWebElementIsVisible(element, 30);
 			if (element.isDisplayed())
 				System.out.println("Element presend on screen ***********" + element);
@@ -160,6 +156,11 @@ public class testbase extends DriverFactory {
 		return value;
 	}
 
+	public static void doubleClick(WebElement webElement) {
+		Actions action = new Actions(driver);
+		action.doubleClick(webElement).perform();
+	}
+
 	public boolean isClickable_javascript(WebElement element) {
 		boolean value = false;
 
@@ -183,7 +184,6 @@ public class testbase extends DriverFactory {
 		File dir = new File(downloadPath);
 		File[] dirContents = dir.listFiles();
 
-		
 		for (int i = 0; i < dirContents.length; i++) {
 			if (dirContents[i].getName().equals(fileName)) {
 				// File has been found, it can now be deleted:

@@ -59,9 +59,22 @@ Feature: Feature to Learning_Automation test functionality
     Then verify Download button should be display & clickable
     Then Verify Filedownloaded or not
 
-  @smoketest
+  @smoketest1
   Scenario: Check loader functionality working or not
      Given user is on Home Page
      When user click on loaderlink
      When user click on run button
      Then loader please wait display or not & verify popup
+     
+  @smoketest1
+  Scenario: Check progressbar functionality working or not
+     Given user is on Home Page
+     When user click on progressbarlink 
+     Then Verify file related progressbar
+     
+  @smoketest
+  Scenario: Check progressbar-text functionality working or not
+     Given user is on Home Page
+     When user click on downloadprogressbarlink 
+     Then Verify progressbar for filedownload    
+     

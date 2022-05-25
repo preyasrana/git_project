@@ -37,7 +37,6 @@ public class Learning_steps {
 		learning_step.switchframe_advertise();
 		Thread.sleep(2000);
 		learning_step.click_windows_close();
-
 		Thread.sleep(5000);
 
 	}
@@ -70,6 +69,20 @@ public class Learning_steps {
 
 	}
 
+	@When("user click on progressbarlink")
+	public void user_click_on_progressbarlink() throws InterruptedException {
+
+		learning_step.hover_more();
+		learning_step.click_on_progressbar();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
+
 	@When("user click on youtubelink")
 	public void user_click_on_youtubelink() throws InterruptedException {
 
@@ -83,7 +96,7 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
-	
+
 	@When("user click on loaderlink")
 	public void user_click_on_loaderlink() throws InterruptedException {
 
@@ -141,6 +154,20 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
+	
+	@When("user click on downloadprogressbarlink")
+	public void user_click_on_downloadprogressbarlink() throws InterruptedException {
+
+		learning_step.hover_more();
+		learning_step.click_lnk_prgdownload();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
 
 	@When("verify open new tab window by default selected")
 	public void verify_open_new_tab_window_by_default_selected() throws InterruptedException {
@@ -165,6 +192,24 @@ public class Learning_steps {
 		Thread.sleep(4000);
 		learning_step.switchToPartentWindow();
 
+	}
+
+	@Then("Verify file related progressbar")
+	public void Verify_file_related_progressbar() throws InterruptedException {
+
+		learning_step.click_btn_progress();
+		if (learning_step.display_progresslbl()) {
+			System.out.println("test");
+		}
+	}
+	
+	@Then("Verify progressbar for filedownload")
+	public void Verify_progressbar_for_filedownload () throws InterruptedException {
+
+		learning_step.click_btn_prgdownload();
+		if (learning_step.display_downloadprogresslbl()) {
+			System.out.println("Download Completed !!!!");
+		}
 	}
 
 	@When("bydefault first accordian open display")
@@ -210,23 +255,22 @@ public class Learning_steps {
 
 		learning_step.click_file_download();
 	}
-	
+
 	@When("user click on run button")
 	public void user_click_on_run_button() throws InterruptedException {
 
 		learning_step.click_loader_run();
 	}
-	
+
 	@Then("loader please wait display or not & verify popup")
 	public void loader_please_wait_display_or_not_verify_popup() throws InterruptedException {
- 
+
 		learning_step.loader_verify();
 		learning_step.popup_verify();
 		learning_step.click_popup_close();
 		Thread.sleep(5000);
-	
+
 	}
-	
 
 	@When("user resize object")
 	public void user_resize_object() throws InterruptedException {
