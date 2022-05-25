@@ -78,9 +78,9 @@ public class Learning_steps {
 		learning_step.hover_video();
 		learning_step.click_youtube();
 		Thread.sleep(2000);
-		// learning_step.switchframe_advertise();
-		// Thread.sleep(2000);
-		// learning_step.click_windows_close();
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
 
 		Thread.sleep(5000);
 
@@ -275,5 +275,25 @@ public class Learning_steps {
 		Thread.sleep(4000);
 
 	}
+
+	@Then("user has start video")
+	public void user_has_start_video() throws InterruptedException {
+
+		
+		learning_step.switchframe_video();
+
+		learning_step.playVideo();
+		
+		Thread.sleep(5000);
+		
+		learning_step.pauseVideo();
+		
+		Thread.sleep(5000);
+		
+		learning_step.playVideo();
+
+	}
+	
+
 
 }

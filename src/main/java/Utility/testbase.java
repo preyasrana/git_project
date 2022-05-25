@@ -19,6 +19,7 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.io.ByteArrayInputStream;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -28,6 +29,10 @@ import java.util.Random;
 import java.util.Set;
 import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
+import javax.xml.bind.DatatypeConverter;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
@@ -51,6 +56,7 @@ public class testbase extends DriverFactory {
 		wait.until(ExpectedConditions.visibilityOf(webElement));
 	}
 
+	
 	// isdisplay
 	public boolean isdisplay(WebElement element) {
 		boolean value = false;

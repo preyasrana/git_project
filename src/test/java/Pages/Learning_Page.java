@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -127,11 +129,20 @@ public class Learning_Page extends testbase {
 	@FindBy(xpath = "//div[@class='ytp-cued-thumbnail-overlay']")
 	WebElement ele_videoElement;
 
-	@FindBy(xpath = "//div[@class='ytp-cued-thumbnail-overlay']//button[@class='ytp-large-play-button ytp-button']")
+	@FindBy(xpath = "//div[@id='movie_player']//div[@class='ytp-cued-thumbnail-overlay']//button[@class='ytp-large-play-button ytp-button']")
 	WebElement btn_playvideo;
+
+	@FindBy(xpath = "//div[@class='ytp-left-controls']//button[@title='Pause (k)']")
+	WebElement btn_pausevideo;
+
+	@FindBy(xpath = "//div[@class='ytp-left-controls']//button[@title='Replay']")
+	WebElement btn_replayvideo;
 
 	@FindBy(xpath = "//span[@class='ytp-time-current']")
 	WebElement ele_video_currentPlayTime;
+
+	@FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/wPECeNP1BoY']")
+	WebElement iframe_videoplayer;
 
 	public Learning_Page() {
 
@@ -142,35 +153,64 @@ public class Learning_Page extends testbase {
 		isClickable(btn_playvideo);
 	}
 
+	public void click_btn_pausevideo() {
+		isClickable(btn_pausevideo);
+	}
+
+	public void playVideo() {
+		try {
+			click_btn_playvideo();
+		} catch (Exception e) {
+
+		}
+	}
+
+	public void pauseVideo() {
+		try {
+			click_btn_pausevideo();
+			Thread.sleep(1000);
+		} catch (Exception e) {
+
+		}
+	}
+
+	public boolean isVideoPlaying() {
+
+		return getAttribute(btn_playvideo, "title").contains("pause");
+
+	}
+
 	public boolean isVideoPlaying(WebElement ele) {
-		return isVideoPlaying(ele);
+		return isVideoPlaying(btn_playvideo);
+	}
+
+	public Integer getCurrentTimeInSeconds() {
+		try {
+			hoverVideoPlayer();
+			return Integer.valueOf(ele_video_currentPlayTime.getText().split(":")[1]);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
-	public void playVideo() {
-        try {
-            if (!isVideoPlaying(btn_playvideo)) {
-            	click_btn_playvideo();
-            }
-        } catch (Exception e) {
 
-        }
-    }
-	
-	  public void pauseVideo() {
-	        try {
-	            if (isVideoPlaying(btn_playvideo)) {
-	            	click_btn_playvideo();
-	            }
-	            Thread.sleep(1000);
-	        } catch (Exception e) {
 
-	        }
-	    }
 
-	
-	private boolean isVideoPlaying_pause(WebElement playButtonEle) {
-        return playButtonEle.getAttribute("title").contains("Pause");
-    }
+	public void hoverVideoPlayer() {
+
+		moveToElement(ele_videoElement);
+		//waitForWebElementIsVisible(ele_videoElement, 30);
+
+	}
+
+	public void sleep(long timeOut) {
+		try {
+			Thread.sleep(timeOut);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
 	public List<String> dob_days() throws InterruptedException {
 
@@ -235,6 +275,10 @@ public class Learning_Page extends testbase {
 
 		switchToFrame(frm_mainframe);
 		switchToFrame(frm_Advertisement);
+	}
+
+	public void switchframe_video() {
+		switchToFrame(iframe_videoplayer);
 	}
 
 	public void click_windows_close() {

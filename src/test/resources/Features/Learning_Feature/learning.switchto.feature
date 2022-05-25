@@ -50,3 +50,4 @@ Feature: Feature to Learning_Automation test functionality
   Scenario: Check Youtube Functionality working or not
     Given user is on Home Page
     When user click on youtubelink
+    Then user has start video
