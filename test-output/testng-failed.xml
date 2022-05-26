@@ -5,7 +5,7 @@
     <classes>
       <class name="API_Tests.Restassured">
         <methods>
-          <include name="name"/>
+          <include name="updateBook"/>
         </methods>
       </class> <!-- API_Tests.Restassured -->
     </classes>

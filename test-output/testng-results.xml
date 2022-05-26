@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3336" started-at="2022-05-26T12:56:03 IST" finished-at="2022-05-26T12:56:06 IST">
+  <suite name="Default suite" duration-ms="2945" started-at="2022-05-26T17:08:56 IST" finished-at="2022-05-26T17:08:59 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3336" started-at="2022-05-26T12:56:03 IST" finished-at="2022-05-26T12:56:06 IST">
-      <class name="API_Tests.Restassured">
-        <test-method status="PASS" signature="queryparam()[pri:0, instance:API_Tests.Restassured@646007f4]" name="queryparam" duration-ms="3298" started-at="2022-05-26T12:56:03 IST" finished-at="2022-05-26T12:56:06 IST">
+    <test name="Default test" duration-ms="2945" started-at="2022-05-26T17:08:56 IST" finished-at="2022-05-26T17:08:59 IST">
+      <class name="API_Tests.GetandPost_Examples">
+        <test-method status="PASS" signature="get()[pri:0, instance:API_Tests.GetandPost_Examples@52525845]" name="get" duration-ms="2916" started-at="2022-05-26T17:08:56 IST" finished-at="2022-05-26T17:08:59 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- queryparam -->
-      </class> <!-- API_Tests.Restassured -->
+        </test-method> <!-- get -->
+      </class> <!-- API_Tests.GetandPost_Examples -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
