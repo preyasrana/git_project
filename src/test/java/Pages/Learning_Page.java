@@ -185,25 +185,21 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//div[@class='progressbar-text'][contains(text(),'100')]")
 	WebElement prg_download100;
-	
-	
-	
 
 	public boolean display_downloadprogresslbl() {
 		return isdisplay(prg_download100);
 
 	}
-	
+
 	public void click_btn_prgdownload() {
 
 		isClickable(btn_prgdownload);
 	}
-	
+
 	public void click_lnk_prgdownload() {
 
 		isClickable(lnk_download_progressbar);
 	}
-
 
 	public boolean display_progresslbl() {
 		return isdisplay(lbl_progress);

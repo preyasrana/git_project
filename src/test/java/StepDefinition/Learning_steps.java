@@ -106,7 +106,6 @@ public class Learning_steps {
 		learning_step.switchframe_advertise();
 		Thread.sleep(2000);
 		learning_step.click_windows_close();
-
 		Thread.sleep(5000);
 
 	}
@@ -154,7 +153,7 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
-	
+
 	@When("user click on downloadprogressbarlink")
 	public void user_click_on_downloadprogressbarlink() throws InterruptedException {
 
@@ -202,9 +201,9 @@ public class Learning_steps {
 			System.out.println("test");
 		}
 	}
-	
+
 	@Then("Verify progressbar for filedownload")
-	public void Verify_progressbar_for_filedownload () throws InterruptedException {
+	public void Verify_progressbar_for_filedownload() throws InterruptedException {
 
 		learning_step.click_btn_prgdownload();
 		if (learning_step.display_downloadprogresslbl()) {
