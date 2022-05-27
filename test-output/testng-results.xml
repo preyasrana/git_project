@@ -2,16 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2945" started-at="2022-05-26T17:08:56 IST" finished-at="2022-05-26T17:08:59 IST">
+  <suite name="Default suite" duration-ms="29970" started-at="2022-05-27T12:17:27 IST" finished-at="2022-05-27T12:17:56 IST">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@f4168b8]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Default test" duration-ms="2945" started-at="2022-05-26T17:08:56 IST" finished-at="2022-05-26T17:08:59 IST">
-      <class name="API_Tests.GetandPost_Examples">
-        <test-method status="PASS" signature="get()[pri:0, instance:API_Tests.GetandPost_Examples@52525845]" name="get" duration-ms="2916" started-at="2022-05-26T17:08:56 IST" finished-at="2022-05-26T17:08:59 IST">
+    <test name="Default test" duration-ms="29970" started-at="2022-05-27T12:17:27 IST" finished-at="2022-05-27T12:17:56 IST">
+      <class name="Runners.Learning_runner">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:Runners.Learning_runner@f4168b8]" name="setUpClass" is-config="true" duration-ms="774" started-at="2022-05-27T12:17:27 IST" finished-at="2022-05-27T12:17:27 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@52f9e8bb]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- get -->
-      </class> <!-- API_Tests.GetandPost_Examples -->
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:Runners.Learning_runner@f4168b8]" name="runScenario" duration-ms="25806" started-at="2022-05-27T12:17:27 IST" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-05-27T12:17:53 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Check ckeditor functionality working or not"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Feature to Learning_Automation test functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:Runners.Learning_runner@f4168b8]" name="tearDownClass" is-config="true" duration-ms="3358" started-at="2022-05-27T12:17:53 IST" finished-at="2022-05-27T12:17:56 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- Runners.Learning_runner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

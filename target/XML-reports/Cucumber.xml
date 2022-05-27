@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="30.088">
-<testcase classname="Feature to Learning_Automation test functionality" name="Check progressbar-text functionality working or not" time="29.839">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="25.97">
+<testcase classname="Feature to Learning_Automation test functionality" name="Check ckeditor functionality working or not" time="25.706">
 <system-out><![CDATA[Given user is on Home Page..................................................passed
-When user click on downloadprogressbarlink..................................passed
-Then Verify progressbar for filedownload....................................passed
+When user click on ckeditorlink.............................................passed
+Then user has entered any details in ckeditor...............................passed
 ]]></system-out>
 </testcase>
 </testsuite>

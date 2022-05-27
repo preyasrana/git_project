@@ -68,6 +68,20 @@ public class Learning_steps {
 		Thread.sleep(5000);
 
 	}
+	
+	@When("user click on ckeditorlink")
+	public void user_click_on_ckeditorlink() throws InterruptedException {
+
+		learning_step.hover_wysiwyg();
+		learning_step.click_ckeditor();
+		Thread.sleep(2000);
+		learning_step.switchframe_advertise();
+		Thread.sleep(2000);
+		learning_step.click_windows_close();
+
+		Thread.sleep(5000);
+
+	}
 
 	@When("user click on progressbarlink")
 	public void user_click_on_progressbarlink() throws InterruptedException {
@@ -383,6 +397,17 @@ public class Learning_steps {
 
 		learning_step.playVideo();
 
+	}
+	
+	@Then("user has entered any details in ckeditor")
+	public void user_has_entered_any_details_in_ckeditor(String Details) throws InterruptedException {
+		
+		learning_step.switchframe_ckeditor();
+		
+		learning_step.enter_CKEditor_details(Details);
+		Thread.sleep(5000);
+		
+		
 	}
 
 	@Then("Verify Filedownloaded or not")

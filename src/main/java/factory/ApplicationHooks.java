@@ -18,9 +18,7 @@ public class ApplicationHooks {
 	private static WebDriver driver;
 	private ConfigReader configReader;
 	Properties prop;
-	//public  SoftAssert softAssert = new SoftAssert();
-	
-	
+	// public SoftAssert softAssert = new SoftAssert();
 
 	/*
 	 * @Before(order = 0)
@@ -64,14 +62,13 @@ public class ApplicationHooks {
 				byte[] sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 				scenario.attach(sourcePath, "image/png", screenshotName);
 				// scenario.attach("test-output/Screenshot", "image/png", screenshotName);
-				
-				
+
 			}
 
 			catch (Exception e) {
 				// TODO: handle exception
 			}
-			//softAssert.assertAll();
+			// softAssert.assertAll();
 
 		}
 	}

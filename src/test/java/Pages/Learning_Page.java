@@ -35,8 +35,14 @@ public class Learning_Page extends testbase {
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'More')]")
 	WebElement lbl_more;
 
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//li//a[contains(text(),'WYSIWYG')]")
+	WebElement lbl_wysiwyg;
+
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Youtube')]")
 	WebElement lnk_youtube;
+
+	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'CKEditor')]")
+	WebElement lnk_CKEditor;
 
 	@FindBy(xpath = "//ul[@class='nav navbar-nav']//ul//li//a[contains(text(),'Windows')]")
 	WebElement lnk_Windows;
@@ -104,6 +110,9 @@ public class Learning_Page extends testbase {
 	@FindBy(id = "ui-datepicker-div")
 	WebElement ele_dob_picker;
 
+	@FindBy(tagName = "body")
+	WebElement edi_ckeditor;
+
 	@FindBy(xpath = "//tbody//tr//td[@data-handler='selectDay']//a")
 	List<WebElement> ele_dob_days;
 
@@ -155,6 +164,9 @@ public class Learning_Page extends testbase {
 
 	@FindBy(xpath = "//iframe[@src='https://www.youtube.com/embed/wPECeNP1BoY']")
 	WebElement iframe_videoplayer;
+
+	@FindBy(xpath = "//iframe[@class='cke_wysiwyg_frame cke_reset']")
+	WebElement iframe_ckeditor;
 
 	@FindBy(xpath = "//div[@class='cont_box']//div[1]//a[contains(text(),'Download')]")
 	WebElement btn_filedownload;
@@ -297,6 +309,11 @@ public class Learning_Page extends testbase {
 
 	}
 
+	public void hover_wysiwyg() throws InterruptedException {
+		moveToElement(lbl_wysiwyg);
+
+	}
+
 	public void hover_interactions() throws InterruptedException {
 		moveToElement(lbl_Interactions);
 
@@ -326,6 +343,10 @@ public class Learning_Page extends testbase {
 
 	public void click_accordion() {
 		isClickable(lnk_Accordion);
+	}
+
+	public void click_ckeditor() {
+		isClickable(lnk_CKEditor);
 	}
 
 	public void click_popup_close() {
@@ -398,6 +419,10 @@ public class Learning_Page extends testbase {
 		switchToFrame(iframe_videoplayer);
 	}
 
+	public void switchframe_ckeditor() {
+		switchToFrame(iframe_ckeditor);
+	}
+
 	public void click_windows_close() {
 		isClickable(btn_Windowclose);
 	}
@@ -447,6 +472,11 @@ public class Learning_Page extends testbase {
 		isElementPresent(ele_dob_picker);
 		return getCurrentDay();
 
+	}
+
+	public void enter_CKEditor_details(String Details) {
+
+		sendKeys(edi_ckeditor, Details);
 	}
 
 	public void resize_obj() {

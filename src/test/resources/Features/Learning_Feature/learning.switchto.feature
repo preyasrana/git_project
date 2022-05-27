@@ -72,9 +72,18 @@ Feature: Feature to Learning_Automation test functionality
      When user click on progressbarlink 
      Then Verify file related progressbar
      
-  @smoketest
+  @smoketest1
   Scenario: Check progressbar-text functionality working or not
      Given user is on Home Page
      When user click on downloadprogressbarlink 
-     Then Verify progressbar for filedownload    
+     Then Verify progressbar for filedownload
+     
+  @smoketest
+  Scenario: Check ckeditor functionality working or not
+     Given user is on Home Page
+     When user click on ckeditorlink
+     Then user has entered any details in ckeditor 
+     |Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.|
+     
+            
      
