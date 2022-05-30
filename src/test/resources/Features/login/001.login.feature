@@ -25,7 +25,7 @@ Feature: feature to login test functionality
     When user click on Myaccount link
     Then user navigate to Register Page
     Then Verify broken images
-    Then Verify broken urls     
+    Then Verify broken urls   
     
      
     

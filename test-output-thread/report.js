@@ -1,4 +1,4 @@
 $(document).ready(function() {
-CucumberHTML.timelineItems.pushArray([{"id":"bcaaa4de-016c-49f1-820c-10b37bc90059","feature":"Feature to Learning_Automation test functionality","scenario":"Check ckeditor functionality working or not","start":1653634047904,"group":1,"content":"","tags":"@feature,@smoketest,","end":1653634073610,"className":"passed"}]);
+CucumberHTML.timelineItems.pushArray([{"id":"1beaac1c-674e-4d65-98d0-2d0aa6d7b595","feature":"Feature to Learning_Automation test functionality","scenario":"Check progressbar-text functionality working or not","start":1653654659339,"group":1,"content":"","tags":"@feature,@smoketest,","end":1653654691799,"className":"passed"},{"id":"bd55e0ba-ab91-47c3-a8d4-1a3c7d2226cb","feature":"Feature to Learning_Automation test functionality","scenario":"Check ckeditor functionality working or not","start":1653654691830,"group":1,"content":"","tags":"@feature,@smoketest,","end":1653654715704,"className":"passed"}]);
 CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[main,5,main]"}]);
 });

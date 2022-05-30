@@ -4,12 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import API_packages_files.Reusable_methods;
 import API_packages_files.payload;
-
 import static io.restassured.RestAssured.*;
-
 import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.Header;
@@ -20,8 +17,10 @@ import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-
 import static org.hamcrest.Matchers.*;
+
+
+
 /*
   given()
       set cookies , add auth , param, header etc

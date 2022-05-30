@@ -72,13 +72,13 @@ Feature: Feature to Learning_Automation test functionality
      When user click on progressbarlink 
      Then Verify file related progressbar
      
-  @smoketest1
+  @smoketest
   Scenario: Check progressbar-text functionality working or not
      Given user is on Home Page
      When user click on downloadprogressbarlink 
      Then Verify progressbar for filedownload
      
-  @smoketest1
+  @smoketest
   Scenario: Check ckeditor functionality working or not
      Given user is on Home Page
      When user click on ckeditorlink
