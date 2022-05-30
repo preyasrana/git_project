@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="API_Tests.ComplexJson">
+      <class name="API_Tests.DynamicJson">
         <methods>
-          <include name="complexjson"/>
+          <include name="postdata"/>
         </methods>
-      </class> <!-- API_Tests.ComplexJson -->
+      </class> <!-- API_Tests.DynamicJson -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

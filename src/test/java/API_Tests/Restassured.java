@@ -37,7 +37,7 @@ public class Restassured {
 	// Give : All input details
 	// When : Submit All api
 	// Then : Validate response
-	@Test
+	//@Test
 	public void RSA_post() {
 
 		
@@ -163,7 +163,7 @@ public class Restassured {
 
 	}
 
-	// @Test
+	 @Test
 	public void basicauth() {
 
 		String Username = "Testing_new_user23";
