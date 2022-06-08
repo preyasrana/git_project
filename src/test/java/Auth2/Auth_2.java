@@ -1,4 +1,4 @@
-package API_Tests;
+package Auth2;
 
 import static io.restassured.RestAssured.given;
 
@@ -10,7 +10,9 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.annotations.Test;
 
 import API_packages_files.Reusable_methods;
+import POJO.Getcouses;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 
 public class Auth_2 {
@@ -67,12 +69,23 @@ public class Auth_2 {
 
 		String accesstoken = json.getString("access_token");
 		System.out.println("access token is ::" + accesstoken);
+		
+		String res  = given().queryParam("access_token", accesstoken)
+				.when()
+				.get("https://rahulshettyacademy.com/getCourse.php").asString();
+		System.out.println("Response is >>"+res);
+		
 
 		// actual request
-		String response = given().queryParam("access_token", accesstoken).when()
-				.get("https://rahulshettyacademy.com/getCourse.php").asString();
+		Getcouses response = given().queryParam("access_token", accesstoken).expect().defaultParser(Parser.JSON)
+				.when()
+				.get("https://rahulshettyacademy.com/getCourse.php").as(Getcouses.class);
 
 		System.out.println(response);
+		
+		System.out.println(response.getLinkedIn());
+		System.out.println(response.getInstructor());
+		
 
 	}
 
