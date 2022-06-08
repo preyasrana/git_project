@@ -1,11 +1,9 @@
 package Auth2;
 
 import static io.restassured.RestAssured.given;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,9 +11,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import com.sun.xml.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
-
 import API_packages_files.Reusable_methods;
 import POJO.Getcouses;
 import POJO.api;
@@ -121,10 +116,10 @@ public class Auth_2 {
 
 		}
 		System.out.println(webauto);
-		
-		String[] Courses = {"Selenium Webdriver Java","Cypress","Protractor"};
+
+		String[] Courses = { "Selenium Webdriver Java", "Cypress", "Protractor" };
 		List<String> expectedlist = Arrays.asList(Courses);
-		
+
 		Assert.assertTrue(webauto.equals(expectedlist));
 
 	}

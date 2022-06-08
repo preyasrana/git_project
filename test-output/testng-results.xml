@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18690" started-at="2022-06-08T14:41:38 IST" finished-at="2022-06-08T14:41:57 IST">
+  <suite name="Default suite" duration-ms="16700" started-at="2022-06-08T15:02:58 IST" finished-at="2022-06-08T15:03:15 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18690" started-at="2022-06-08T14:41:38 IST" finished-at="2022-06-08T14:41:57 IST">
+    <test name="Default test" duration-ms="16700" started-at="2022-06-08T15:02:58 IST" finished-at="2022-06-08T15:03:15 IST">
       <class name="Auth2.Auth_2">
-        <test-method status="PASS" signature="Auth()[pri:0, instance:Auth2.Auth_2@71623278]" name="Auth" duration-ms="18640" started-at="2022-06-08T14:41:38 IST" finished-at="2022-06-08T14:41:57 IST">
+        <test-method status="PASS" signature="Auth()[pri:0, instance:Auth2.Auth_2@71623278]" name="Auth" duration-ms="16655" started-at="2022-06-08T15:02:58 IST" finished-at="2022-06-08T15:03:15 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Auth -->

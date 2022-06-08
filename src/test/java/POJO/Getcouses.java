@@ -1,5 +1,12 @@
 package POJO;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Getcouses {
 	
 	private String instructor;
@@ -9,6 +16,8 @@ public class Getcouses {
 	private Courses courses;
 	private String linkedIn;
 
+
+	/*
 	public String getInstructor() {
 		return instructor;
 	}
@@ -56,6 +65,8 @@ public class Getcouses {
 	public void setLinkedIn(String linkedIn) {
 		this.linkedIn = linkedIn;
 	}
+	*/
+
 
 	
 
