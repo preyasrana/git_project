@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2661" started-at="2022-06-08T15:59:21 IST" finished-at="2022-06-08T15:59:24 IST">
+  <suite name="Default suite" duration-ms="2474" started-at="2022-06-08T17:00:09 IST" finished-at="2022-06-08T17:00:11 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2661" started-at="2022-06-08T15:59:21 IST" finished-at="2022-06-08T15:59:24 IST">
-      <class name="Auth2.Serialize">
-        <test-method status="PASS" signature="serialzed()[pri:0, instance:Auth2.Serialize@4ae82894]" name="serialzed" duration-ms="2626" started-at="2022-06-08T15:59:21 IST" finished-at="2022-06-08T15:59:24 IST">
+    <test name="Default test" duration-ms="2474" started-at="2022-06-08T17:00:09 IST" finished-at="2022-06-08T17:00:11 IST">
+      <class name="Auth2.SpecBuilder">
+        <test-method status="PASS" signature="serialzed()[pri:0, instance:Auth2.SpecBuilder@4ae82894]" name="serialzed" duration-ms="2430" started-at="2022-06-08T17:00:09 IST" finished-at="2022-06-08T17:00:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- serialzed -->
-      </class> <!-- Auth2.Serialize -->
+      </class> <!-- Auth2.SpecBuilder -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
