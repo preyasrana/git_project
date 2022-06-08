@@ -24,6 +24,8 @@ public class Home_page extends testbase {
 
 		// moveToElement(txt_emailid_login);
 		isClickable(lnk_shop);
+		
+	       
 
 	}
 

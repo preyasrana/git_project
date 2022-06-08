@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="3066" started-at="2022-05-30T12:34:11 IST" finished-at="2022-05-30T12:34:14 IST">
+  <suite name="Default suite" duration-ms="15193" started-at="2022-06-08T12:05:28 IST" finished-at="2022-06-08T12:05:43 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="3066" started-at="2022-05-30T12:34:11 IST" finished-at="2022-05-30T12:34:14 IST">
-      <class name="API_Tests.Restassured">
-        <test-method status="PASS" signature="basicauth()[pri:0, instance:API_Tests.Restassured@52525845]" name="basicauth" duration-ms="3033" started-at="2022-05-30T12:34:11 IST" finished-at="2022-05-30T12:34:14 IST">
+    <test name="Default test" duration-ms="15193" started-at="2022-06-08T12:05:28 IST" finished-at="2022-06-08T12:05:43 IST">
+      <class name="API_Tests.Auth_2">
+        <test-method status="PASS" signature="Auth()[pri:0, instance:API_Tests.Auth_2@103f852]" name="Auth" duration-ms="15155" started-at="2022-06-08T12:05:28 IST" finished-at="2022-06-08T12:05:43 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- basicauth -->
-      </class> <!-- API_Tests.Restassured -->
+        </test-method> <!-- Auth -->
+      </class> <!-- API_Tests.Auth_2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

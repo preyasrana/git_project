@@ -7,6 +7,7 @@ import factory.DriverFactory;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import API_Tests.*;
 
 public class LoginSteps {
 
@@ -21,8 +22,11 @@ public class LoginSteps {
 	Login_page login = new Login_page();
 	XLS_Reader reader = new XLS_Reader("src/test/resources/Files/SampleExcel.xlsx");
 
+
+	
 	@When("user has enter {string} & {string}")
 	public void user_has_enter_emailid_password(String emailid, String password) {
+		
 		// Write code here that turns the phrase above into concrete actions
 		System.out.println("Inside Steps - user has enter emailid & password");
 

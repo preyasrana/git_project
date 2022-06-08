@@ -19,6 +19,8 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import static org.hamcrest.Matchers.*;
 
+import javax.mail.Message;
+
 
 
 /*
@@ -29,6 +31,9 @@ import static org.hamcrest.Matchers.*;
   then()
     validate status code, exract code , cookies etc          
  */
+
+
+
 
 public class Restassured {
 	
@@ -163,7 +168,7 @@ public class Restassured {
 
 	}
 
-	 @Test
+	// @Test
 	public void basicauth() {
 
 		String Username = "Testing_new_user23";
@@ -182,6 +187,13 @@ public class Restassured {
 		System.out.println("Response ::" + body.asPrettyString());
 		System.out.println("resnew  ::" + resnew);
 
+	}
+	
+	
+	public void serial() {
+		
+	    
+		
 	}
 
 }
