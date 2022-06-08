@@ -19,7 +19,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import io.restassured.parsing.Parser;
 import io.restassured.path.json.JsonPath;
 
-public class Auth_2 {
+public class Deserialize {
 
 	public JsonPath json;
 	public static WebDriver driver;
